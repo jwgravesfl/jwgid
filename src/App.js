@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import TimeSlot from './components/signupSheet/TimeSlot'
+
 async function loadGreeting() {
   const response = await fetch('http://localhost:9000/graphql', {
     method: 'POST',
@@ -26,6 +28,8 @@ class App extends Component {
       <div className="">
         <header className="">
           <h1 className="">{greeting}</h1>
+          <TimeSlot />
+            
         </header>
         
       </div>
