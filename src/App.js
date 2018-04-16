@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Main from './components/Main'
+import { Home } from './components/homepage/Home'
 
 // async function loadGreeting() {
 //   const response = await fetch('http://localhost:9000/graphql', {
@@ -27,8 +27,7 @@ class App extends Component {
     return (
       <div className="">
 
-        <Main />       
-
+        <Home />
       </div>
     );
   }
