@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { Home } from './components/homepage/Home'
 
+import styled from 'styled-components'
+
 // async function loadGreeting() {
 //   const response = await fetch('http://localhost:9000/graphql', {
 //     method: 'POST',
@@ -12,6 +14,11 @@ import { Home } from './components/homepage/Home'
 //   return responseBody.data.greeting
 // }
 
+const AppDiv = styled.div`
+    .appDivContainer {
+      
+    }
+`;
 
 
 class App extends Component {
@@ -25,10 +32,11 @@ class App extends Component {
   render() {
    
     return (
-      <div className="">
-
-        <Home />
-      </div>
+      <AppDiv>
+        <div className="appDivContainer">
+          <Home />
+        </div>
+      </AppDiv>
     );
   }
 }
