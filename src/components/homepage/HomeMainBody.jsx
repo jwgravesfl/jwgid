@@ -27,13 +27,13 @@ const HomeMainBodyDiv = styled.div`
     }
 
     .segment2Home {
-      padding: 8vh 1vh;
-      height: 100vh;
+      padding: ;
       background-color: white;
     }
 
     .segment2Header {
-      font-size: 2vh;
+      font-size: 3vh;
+
     }
 
     .segment2Card {
@@ -64,10 +64,10 @@ export default class HomeMainBody extends Component {
               <Grid.Row>
               
                 <Grid.Column width={8}>
-                <Header as='h3' className="segment2Header">Where Street Smarts and Book Smarts meet.</Header>
+                <div className="segment2Header">Where Street Smarts and Book Smarts meet.</div>
                   <div className="segment2Card">
 
-                    <Header as='h3' className="segment2Header">Street Smarts</Header>
+                    <div className="segment2Header">Street Smarts</div>
                     <p>
                      Having emphasized education in my recent 2017 Information Architecture BSAS degree from the University 
                      of South Florida, explaining concepts using a learner centered approach provides the best chances for success.
@@ -76,7 +76,7 @@ export default class HomeMainBody extends Component {
                     </p>
                   </div>
                   <div className="segment2Card">
-                  <Header as='h3' className="segment2Header">Book Smarts</Header>
+                  <div className="segment2Header">Book Smarts</div>
                   <p>
                     Having an unrelently desire to learn in a current and relevant way, I not only have years of experience at the 
                     highest level of the accounting industry and business with Big 4 Accounting Firm PricewaterhouseCoopers, LLP, 
@@ -84,7 +84,7 @@ export default class HomeMainBody extends Component {
                   </p>
                   </div>
                   <div className="segment2Card">
-                    <Header as='h3' className="segment2Header">Bringing them Together</Header>
+                    <div className="segment2Header">Bringing them Together</div>
                     <p>
                       As a full stack web developer one wears many hats.  From hearing, understanding and cultivating the client vision to 
                       designing, creating and deveoping the web application, one must have a complete understanding of the process.  Being able
@@ -97,8 +97,8 @@ export default class HomeMainBody extends Component {
                   <Image
                     bordered
                     rounded
-                    size='large'
                     src={imgSuit}
+                    fluid
                   />
                 </Grid.Column>
               </Grid.Row>

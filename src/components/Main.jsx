@@ -6,8 +6,6 @@ import TimeSlot from './signupSheet/TimeSlot'
 
 import styled from 'styled-components'
 
-
-
   const MainDiv = styled.div`
     .mainDivContainer {
   
@@ -20,7 +18,6 @@ const Main = () => (
       <Switch>
         <Route exact path='/' component={HomeMainBody} />
         <Route path='/timeslot' component={TimeSlot} />
-        
       </Switch>
     </main>
   </MainDiv>
