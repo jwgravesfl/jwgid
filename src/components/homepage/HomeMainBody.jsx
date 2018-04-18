@@ -50,11 +50,11 @@ export default class HomeMainBody extends Component {
     return (
       <HomeMainBodyDiv>
         <div className="homeMainBodyContainer">
-          <Responsive as={Segment} minWidth={768} className="homeResponsiveContainer">
+          <Responsive as={Segment} minWidth={600} className="homeResponsiveContainer">
             <HomepageHeading />
           </Responsive>
           
-          <Responsive as={Segment} maxWidth={768} className="homeResponsiveContainer">
+          <Responsive as={Segment} maxWidth={600} className="homeResponsiveContainer">
             <HomepageHeading mobile />
           </Responsive>
 
