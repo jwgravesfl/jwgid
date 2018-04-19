@@ -32,7 +32,24 @@ const HomeMainBodyDiv = styled.div`
     }
 
     .segment2Header {
-      font-size: 3vh;
+      .cardHeaderSLCR1 {
+        text-align: center;
+        width: 100%;
+        background-color: ;
+        line-height: 120%;
+    
+        font-size: 1.3em; 
+    
+          @media screen and (min-width: 480px) {
+              font-size: 2.3em; 
+            }
+          @media screen and (min-width: 766px) {
+              font-size: 1.9em; 
+            }
+          @media screen and (min-width: 1400px) {
+              font-size: 3em; 
+            }
+      }
 
     }
 

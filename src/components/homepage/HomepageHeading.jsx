@@ -82,67 +82,25 @@ const HomePageHeadingDiv = styled.div`
     background-color: ;
     line-height: 120%;
 
-    font-size: 1.3em; 
-
-      @media screen and (min-width: 480px) {
-          font-size: 2.3em; 
-        }
-      @media screen and (min-width: 766px) {
-          font-size: 1.9em; 
-        }
-      @media screen and (min-width: 1400px) {
-          font-size: 3em; 
-        }
+    font-size: 100%; 
   }
 
   .cardMetaSLCR1 {
     line-height: 120%;
 
-    font-size: .65em; 
-
-      @media screen and (min-width: 480px) {
-          font-size: 1.15em; 
-        }
-      @media screen and (min-width: 766px) {
-          font-size: .95em; 
-        }
-      @media screen and (min-width: 1400px) {
-          font-size: 1.5em; 
-        }
+    font-size: 100%; 
   }
 
   .cardDescriptionSLCR1 {
     line-height: 120%;
-    font-size: 1em; 
-
-        @media screen and (min-width: 480px) {
-            font-size: 1.75em; 
-          }
-        @media screen and (min-width: 766px) {
-            font-size: 1.5em; 
-          }
-        @media screen and (min-width: 1400px) {
-            font-size: 2em; 
-          }
-    }
+    font-size: 100%; 
   }
 
   .cardHeaderSLCR2 {
     width: 100%;
     background-color: ;
     line-height: 50%;
-
-    font-size: 1.1em; 
-
-      @media screen and (min-width: 480px) {
-          font-size: 2em; 
-        }
-      @media screen and (min-width: 766px) {
-          font-size: 1.7em; 
-        }
-      @media screen and (min-width: 1400px) {
-          font-size: 2.7em; 
-        }
+    font-size: 100%; 
   }
 
   .cardHeaderSLCR2a {
@@ -150,55 +108,26 @@ const HomePageHeadingDiv = styled.div`
     width: 100%;
     background-color: ;
     line-height: 100%;
-    font-size: .9em; 
-
-        @media screen and (min-width: 480px) {
-            font-size: 1.6em; 
-          }
-        @media screen and (min-width: 766px) {
-            font-size: 1.3em; 
-          }
-        @media screen and (min-width: 1400px) {
-            font-size: 2em; 
-          }
-    }
+    font-size: 100%; 
   }
 
   .cardMetaSLCR2 {
-    font-size: 1.2vw;
     line-height: 50%;
-    font-size: .65em; 
-
-      @media screen and (min-width: 480px) {
-          font-size: 1.15em; 
-        }
-      @media screen and (min-width: 766px) {
-          font-size: .95em; 
-        }
-      @media screen and (min-width: 1400px) {
-          font-size: 1.5em; 
-        }   
+    font-size: 100%; 
   }
 
   .cardDescriptionSLCR2 {
     ul {
       margin: 0;
+      padding: .5vw;
       line-height: 120%;
+      list-style-type: ;
     }
-    font-size: .8em; 
-
-        @media screen and (min-width: 480px) {
-            font-size: 1.3em; 
-          }
-        @media screen and (min-width: 766px) {
-            font-size: 1em; 
-          }
-        @media screen and (min-width: 1400px) {
-            font-size: 1.2em; 
-          }
-    }
+    font-size: 80%; 
   }
 `
+
+
 
 export const HomepageHeading = ({ mobile }) => (
     <HomePageHeadingDiv>
