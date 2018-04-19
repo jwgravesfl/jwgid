@@ -58,6 +58,31 @@ const HomeMainBodyDiv = styled.div`
         margin-bottom: 1vh;
       }
     }
+
+    .segment3Post {
+      font-size: 120%;
+      color: white;
+      border-radius: 10px;
+      background: linear-gradient(blue, black);
+      border-width:5px;  
+      border-style:outset;
+      border-color: white;
+      padding: 1vh;
+      
+    }
+
+    .segment4Post {
+      font-size: 120%;
+      color: white;
+      border-radius: 10px;
+      background: linear-gradient(black, grey, blue);
+      border-width: 1px;  
+      border-style: outset;
+      border-color: white;
+      padding: 1vh;
+      text-align; center;
+      
+    }
 `
 
 export default class HomeMainBody extends Component {
@@ -129,22 +154,22 @@ export default class HomeMainBody extends Component {
             <Grid celled='internally' columns='equal' stackable>
               <Grid.Row textAlign='center'>
                 <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                  <Header as='h3' style={{ fontSize: '200%', color: 'white'}}>"A Dependable Employee"</Header>
-                  <p style={{ fontSize: '150%', color: 'white' }}>J proved himself to be a dependable employee and a hard worker with solid problem solving and technical skills. </p>
+                  <Header as='h3' className="segment3Post">"A Dependable Employee"</Header>
+                  <p className='segment3Post'>J proved himself to be a dependable employee and a hard worker with solid problem solving and technical skills. </p>
                 </Grid.Column>
                 <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                  <Header as='h3' style={{ fontSize: '200%', color: 'white' }}>"A Team Player"</Header>
-                  <p style={{ fontSize: '150%', color: 'white' }}>
+                  <Header as='h3' className="segment3Post">"A Team Player"</Header>
+                  <p className="segment3Post">
                   J would be an asset to have on any team.
                   </p>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
           </Segment>
-          <Segment style={{ padding: '8em 1vh' }} vertical>
+          <Segment style={{ padding: '1vh' }} vertical>
             <Container text>
-              <Header as='h3' style={{ fontSize: '200%', color: 'white', background: 'black', borderRadius: '15px', padding: '1vh', textAlign: 'center' }}>Do you have a role that needs filled?</Header>
-              <p style={{ fontSize: '150%', color: 'white', background: 'black', borderRadius: '15px', padding: '1vh', textAlign: 'justify' }}>
+              <Header as='h3' className='segment4Post'>Do you have a role that needs filled?</Header>
+              <p className="segment4Post">
                 With 20 years of business, technical and corporate experience, I will add value to any organization.  Having worked at the hightest level
                 of corporate America and having recently completed a BSAS degree from the University of South Florida with a 3.71GPA, I have a proven track record.  
                 If you have a role that needs filled, I will be your best choice.  

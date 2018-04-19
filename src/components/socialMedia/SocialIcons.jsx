@@ -6,8 +6,8 @@ import styled from 'styled-components'
 
 const SocialIconsDiv = styled.div`
     .socialIconsContainer {
-        width: 10vh;
-        height: 20vh;
+        width: 5vh;
+        height: 10vh;
         position: fixed;
         bottom: 15%;
         left: 0;
