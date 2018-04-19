@@ -34,24 +34,24 @@ const HomePageHeadingDiv = styled.div`
 
   .segmentLCR1 {
     background-color: ;
-    height: 27vh;
+    height: 100%;
 
   }
 
   .segmentLCR2 {
     background-color: ;
-    height: 40vh;
+    height: 100%;
     margin-bottom: 1vh;
   }
 
   .segmentRC {
     background-color: ;
-    height: 40vh;
+    height: 100%;
   }
 
   .segmentRCR2 {
     background-color: ;
-    height: 30vh;
+    height: 100%;
   }
 
   .cardSLCR1 {
@@ -77,7 +77,7 @@ const HomePageHeadingDiv = styled.div`
   }
 
   .cardHeaderSLCR1 {
-    text-align: center;
+    text-align: left;
     width: 100%;
     background-color: ;
     line-height: 120%;
@@ -140,9 +140,9 @@ export const HomepageHeading = ({ mobile }) => (
                     <div className="segmentLCR1">
                     <Card className="cardSLCR1" raised>
                       <Card.Content>
-                        <Card.Header textAlign='center'><span className="cardHeaderSLCR1">J. Wayne Graves</span></Card.Header>
-                        <Card.Meta textAlign='center'><span className="cardMetaSLCR1">Information Design Specialist</span></Card.Meta>
-                        <Card.Description textAlign='center'><span className="cardDescriptionSLCR1">Full Stack Web Developvhent with a focus on information design.</span></Card.Description>
+                        <Card.Header textAlign='left'><span className="cardHeaderSLCR1">J. Wayne Graves</span></Card.Header>
+                        <Card.Meta textAlign='left'><span className="cardMetaSLCR1">Information Design Specialist</span></Card.Meta>
+                        <Card.Description textAlign='left'><span className="cardDescriptionSLCR1">Full Stack Web Developvhent with a focus on information design.</span></Card.Description>
                       </Card.Content >
                     </Card>
                     </div>

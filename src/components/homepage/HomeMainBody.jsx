@@ -31,33 +31,31 @@ const HomeMainBodyDiv = styled.div`
       background-color: white;
     }
 
+    .whereStreetSmarts {
+      text-align: center;
+      width: 100%;
+      background-color: ;
+      line-height: 120%;
+      font-size: 175%;
+      font-weight: bold;
+      margin-bottom: 1vh;
+  }
+
     .segment2Header {
-      .cardHeaderSLCR1 {
-        text-align: center;
+        text-align: left;
         width: 100%;
         background-color: ;
         line-height: 120%;
-    
-        font-size: 1.3em; 
-    
-          @media screen and (min-width: 480px) {
-              font-size: 2.3em; 
-            }
-          @media screen and (min-width: 766px) {
-              font-size: 1.9em; 
-            }
-          @media screen and (min-width: 1400px) {
-              font-size: 3em; 
-            }
-      }
-
+        font-size: 125%;
+        font-weight: bold;
     }
 
     .segment2Card {
       background-color: transparent;
 
       p {
-        font-size: 1vh;
+        font-size: 100%;
+        margin-bottom: 1vh;
       }
     }
 `
@@ -67,11 +65,11 @@ export default class HomeMainBody extends Component {
     return (
       <HomeMainBodyDiv>
         <div className="homeMainBodyContainer">
-          <Responsive as={Segment} minWidth={600} className="homeResponsiveContainer">
+          <Responsive as={Segment} minWidth={768} className="homeResponsiveContainer">
             <HomepageHeading />
           </Responsive>
           
-          <Responsive as={Segment} maxWidth={600} className="homeResponsiveContainer">
+          <Responsive as={Segment} maxWidth={768} className="homeResponsiveContainer">
             <HomepageHeading mobile />
           </Responsive>
 
@@ -81,7 +79,7 @@ export default class HomeMainBody extends Component {
               <Grid.Row>
               
                 <Grid.Column width={8}>
-                <div className="segment2Header">Where Street Smarts and Book Smarts meet.</div>
+                <div className="whereStreetSmarts">Where Street Smarts and Book Smarts meet.</div>
                   <div className="segment2Card">
 
                     <div className="segment2Header">Street Smarts</div>
@@ -131,14 +129,13 @@ export default class HomeMainBody extends Component {
             <Grid celled='internally' columns='equal' stackable>
               <Grid.Row textAlign='center'>
                 <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                  <Header as='h3' style={{ fontSize: '2em' }}>"What a Company"</Header>
-                  <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
+                  <Header as='h3' style={{ fontSize: '200%', color: 'white'}}>"A Dependable Employee"</Header>
+                  <p style={{ fontSize: '150%', color: 'white' }}>J proved himself to be a dependable employee and a hard worker with solid problem solving and technical skills. </p>
                 </Grid.Column>
                 <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                  <Header as='h3' style={{ fontSize: '2em' }}>"I shouldn't have gone with their competitor."</Header>
-                  <p style={{ fontSize: '1.33em' }}>
-                    <Image avatar src='/assets/images/avatar/large/nan.jpg' />
-                    <b>Nan</b> Chief Fun Officer Acme Toys
+                  <Header as='h3' style={{ fontSize: '200%', color: 'white' }}>"A Team Player"</Header>
+                  <p style={{ fontSize: '150%', color: 'white' }}>
+                  J would be an asset to have on any team.
                   </p>
                 </Grid.Column>
               </Grid.Row>
@@ -146,28 +143,12 @@ export default class HomeMainBody extends Component {
           </Segment>
           <Segment style={{ padding: '8em 1vh' }} vertical>
             <Container text>
-              <Header as='h3' style={{ fontSize: '2em' }}>Breaking The Grid, Grabs Your Attention</Header>
-              <p style={{ fontSize: '1.33em' }}>
-                Instead of focusing on content creation and hard work, we have learned how to master the art of doing
-                nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic
-                and worth your attention.
+              <Header as='h3' style={{ fontSize: '200%', color: 'white', background: 'black', borderRadius: '15px', padding: '1vh', textAlign: 'center' }}>Do you have a role that needs filled?</Header>
+              <p style={{ fontSize: '150%', color: 'white', background: 'black', borderRadius: '15px', padding: '1vh', textAlign: 'justify' }}>
+                With 20 years of business, technical and corporate experience, I will add value to any organization.  Having worked at the hightest level
+                of corporate America and having recently completed a BSAS degree from the University of South Florida with a 3.71GPA, I have a proven track record.  
+                If you have a role that needs filled, I will be your best choice.  
               </p>
-              <Button as='a' size='large'>Read More</Button>
-              <Divider
-                as='h4'
-                className='header'
-                horizontal
-                style={{ margin: '3em 1vh', textTransform: 'uppercase' }}
-              >
-                Case Studies
-              </Divider>
-              <Header as='h3' style={{ fontSize: '2em' }}>Did We Tell You About Our Bananas?</Header>
-              <p style={{ fontSize: '1.33em' }}>
-                Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but it's really
-                true.
-                It took years of gene splicing and combinatory DNA research, but our bananas can really dance.
-              </p>
-              <Button as='a' size='large'>I'm Still Quite Interested</Button>
             </Container>
           </Segment>
           <Footer /> 
