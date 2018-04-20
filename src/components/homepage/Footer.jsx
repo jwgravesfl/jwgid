@@ -20,7 +20,7 @@ export default class Footer extends Component {
     return (
       <FooterDiv>
         <div className="footerContainer">
-          <Segment inverted vertical style={{ padding: '5em 1vh' }}>
+          <Segment inverted vertical style={{ padding: '5em 1vh' }} textAlign='right'>
           <Container>
             <Grid divided inverted stackable>
               <Grid.Row>

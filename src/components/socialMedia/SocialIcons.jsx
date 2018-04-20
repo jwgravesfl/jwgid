@@ -7,7 +7,7 @@ const SocialIconsDiv = styled.div`
     .socialIconsContainer {
         position: fixed;
         bottom: 20%;
-        right: 0;
+        left: 0;
         background-color: ;
     }
 
