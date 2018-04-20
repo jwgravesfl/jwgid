@@ -94,7 +94,7 @@ export default class HomeMainBody extends Component {
             <HomepageHeading />
           </Responsive>
           
-          <Responsive as={Segment} maxWidth={768} className="homeResponsiveContainer">
+          <Responsive as={Segment} maxWidth={767} className="homeResponsiveContainer">
             <HomepageHeading mobile />
           </Responsive>
 

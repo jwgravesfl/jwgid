@@ -24,27 +24,18 @@ export default class Footer extends Component {
           <Container>
             <Grid divided inverted stackable>
               <Grid.Row>
-                <Grid.Column width={3}>
-                  <Header inverted as='h4' content='About' />
-                  <List link inverted>
-                    <List.Item>Sitemap</List.Item>
-                    <List.Item>Contact Us</List.Item>
-                    <List.Item>Religious Ceremonies</List.Item>
-                    <List.Item>Gazebo Plans</List.Item>
-                  </List>
-                </Grid.Column>
-                <Grid.Column width={3}>
+                <Grid.Column width={7}>
                   <Header inverted as='h4' content='Examples' />
-                  <List link inverted>
+                  <List inverted>
                     <List.Item><Link to="/timeslot">Sign Up Sheet</Link></List.Item>
-                    <List.Item>DNA FAQ</List.Item>
-                    <List.Item>How To Access</List.Item>
-                    <List.Item>Favorite X-Men</List.Item>
+                    <List.Item><a href="https://heatherlove.surge.sh">Heather Love Music</a></List.Item>
+                    <List.Item>Coming Soon</List.Item>
+                    <List.Item>Coming Soon</List.Item>
                   </List>
                 </Grid.Column>
                 <Grid.Column width={7}>
-                  <Header as='h4' inverted>Footer Header</Header>
-                  <p>Extra space for a call to action inside the footer that could help re-engage JJJJJ.</p>
+                  <Header as='h4' inverted>Happy to Help</Header>
+                  <p>I look forward to working with you.  Please let me know if there is anything I can do to add value to you or your organization.</p>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
