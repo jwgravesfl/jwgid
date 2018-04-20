@@ -142,7 +142,7 @@ export const HomepageHeading = ({ mobile }) => (
                       <Card.Content>
                         <Card.Header textAlign='left'><span className="cardHeaderSLCR1">J. Wayne Graves</span></Card.Header>
                         <Card.Meta textAlign='left'><span className="cardMetaSLCR1">Information Design Specialist</span></Card.Meta>
-                        <Card.Description textAlign='left'><span className="cardDescriptionSLCR1">Full Stack Web Developvhent with a focus on information design.</span></Card.Description>
+                        <Card.Description textAlign='left'><span className="cardDescriptionSLCR1">Full Stack Web Development with a focus on information design.</span></Card.Description>
                       </Card.Content >
                     </Card>
                     </div>

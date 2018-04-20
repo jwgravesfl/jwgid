@@ -53,8 +53,7 @@ export class MobileContainer extends Component {
           <Sidebar as={Menu} animation='uncover' inverted vertical visible={sidebarOpened}>
             <Menu.Item><Link to="/" onClick={this.handleToggle}>Home</Link></Menu.Item>
             <Menu.Item><Link to="/timeslot" onClick={this.handleToggle}>Sign Up Sheet</Link></Menu.Item>
-            <Menu.Item>Company</Menu.Item>
-            <Menu.Item>Personnel</Menu.Item>
+            
                 <ImgSpan>
                   <img src={imgLogo} alt="" />
                 </ImgSpan>

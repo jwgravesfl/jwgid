@@ -49,17 +49,17 @@ export default class TimeSlotForm extends Component {
     const hasBeenTaken = this.state.hasBeenTaken
 
     return (
-      <div>
+      <span>
         {hasBeenTaken ?
           (
-            <div>
+            <span>
               {this.state.fName} {this.state.lName} {this.state.gName}
               <Button onClick={e => this.handleRemoveClick(e)}>
                 Leave Spot
               </Button>
-            </div>
+            </span>
           ) : (
-            <div>
+            <span>
               <Form onSubmit={ this.onSubmit }>
                   <Form.Group inline>
                       <Form.Input 
@@ -91,9 +91,9 @@ export default class TimeSlotForm extends Component {
                       </Button>
                   </Form.Group>
               </Form>
-            </div>
+            </span>
           )}        
-      </div>
+      </span>
 
     )
   }

@@ -46,8 +46,6 @@ export class DesktopContainer extends Component {
               <Container>
                 <Menu.Item><Link to="/">Home</Link></Menu.Item>
                 <Menu.Item><Link to="/timeslot">Sign Up Sheet</Link></Menu.Item>
-                <Menu.Item>Company</Menu.Item>
-                <Menu.Item>Careers</Menu.Item>
 
                 <ImgSpan>
                   <img src={imgLogo} alt="" />
