@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, List, Table, Header, Image } from 'semantic-ui-react'
+import { Container, List, Table, Header, Image, Label } from 'semantic-ui-react'
 import TimeSlotForm from './TimeSlotForm'
 
 
@@ -23,22 +23,17 @@ export default class TimeSlot extends Component {
   render(){
     return (
       <TimeSlotMainDiv>
-        <Container raised text>
-        <div className=" timeslotContainer">
-          <List divided>
-            <List.Item>
-              7:00      <TimeSlotForm />
-            </List.Item>
-            <List.Item>
-              8:00      <TimeSlotForm />
-            </List.Item>
-            <List.Item>
-              9:00      <TimeSlotForm />
-            </List.Item>
-            <List.Item>
-              10:00     <TimeSlotForm />
-            </List.Item>
-          </List>
+        <Container text>
+          <div className=" timeslotContainer">
+            <Table>
+              <Table.Body>
+                <Table.Row>
+                 <Label ribbon >7:00</Label>
+                 
+                  <Table.Cell colSpan='1' style={{backgroundColor: 'red'}}>Cell</Table.Cell>
+                </Table.Row>
+              </Table.Body>
+            </Table>
         </div>
       </Container>
     </TimeSlotMainDiv>
