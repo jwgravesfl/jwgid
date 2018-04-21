@@ -1,11 +1,21 @@
 import React, { Component } from 'react'
-import { Form, Button } from 'semantic-ui-react'
+import { Form, Button, Responsive } from 'semantic-ui-react'
 
 import styled from 'styled-components'
 
 const TimeSlotFormMainDiv = styled.div `
   width: 100%;
   text-align: center;
+
+  .beenTakenPresentation {
+    
+  }
+
+  .nameSpans {
+    margin: 1vmax;
+    font-family: 'Rock Salt', cursive;
+    text-weight: bold;
+  }
 `
 
 export default class TimeSlotForm extends Component {
@@ -26,7 +36,7 @@ export default class TimeSlotForm extends Component {
     this.setState({
       [e.target.name]: e.target.value,
       })
-    console.log(this.state, this.props)
+  //  console.log(this.state, this.props)
   }
 
   onSubmit = (e) => {
@@ -42,35 +52,53 @@ export default class TimeSlotForm extends Component {
  handleRemoveClick = (e) => {
   e.preventDefault()
   this.setState({
-    fname: "",
     lName: "",
     gName: "",
+    fName: "",
     hasBeenTaken: false
   })
  }
 
-  
-
   render(){
-
     const hasBeenTaken = this.state.hasBeenTaken
-
     return (
-      
       <TimeSlotFormMainDiv>
       <span>
         {hasBeenTaken ?
           (
-            <span>
-              {this.state.fName} {this.state.lName} {this.state.gName}
-              <Button onClick={e => this.handleRemoveClick(e)}>
-                Leave Spot
+           <div> <Responsive minWidth={768}>
+            <span className="beenTakenPresentation">
+              <span className="nameSpans">{this.state.gName}</span>
+              <span className="nameSpans">{this.state.fName}</span>
+              <span className="nameSpans">{this.state.lName}</span>
+              <Button inverted size="small" color='red' onClick={e => this.handleRemoveClick(e)}>
+                Clear
               </Button>
             </span>
+            </Responsive>
+            <Responsive maxWidth={767}>
+            <span className="beenTakenPresentation">
+              <div className="nameSpans">{this.state.gName}</div>
+              <div className="nameSpans">{this.state.fName}</div>
+              <div className="nameSpans">{this.state.lName}</div>
+              <Button inverted size="small" color='red' onClick={e => this.handleRemoveClick(e)}>
+                Clear
+              </Button>
+            </span>
+            </Responsive>
+            </div>
           ) : (
             <span>
               <Form widths="equal" onSubmit={ this.onSubmit }>
                   <Form.Group inline>
+                    <Form.Input 
+                      fluid
+                      placeholder='Group Name'
+                      name='gName'
+                      width="3"
+                      value={ this.state.gName }
+                      onChange={e => this.change(e)}
+                      />
                       <Form.Input 
                       fluid
                       placeholder='First Name'
@@ -78,6 +106,7 @@ export default class TimeSlotForm extends Component {
                       width="3"
                       value={ this.state.fName }
                       onChange={e => this.change(e)}
+                      required={true}
                       />
                       <Form.Input 
                       fluid
@@ -87,15 +116,7 @@ export default class TimeSlotForm extends Component {
                       value={ this.state.lName }
                       onChange={e => this.change(e)}
                       />
-                      <Form.Input 
-                      fluid
-                      placeholder='Group Name'
-                      name='gName'
-                      width="3"
-                      value={ this.state.gName }
-                      onChange={e => this.change(e)}
-                      />
-                      <Button type='submit'>
+                      <Button type='submit' inverted size="small" color='blue'>
                         Take Spot
                       </Button>
                   </Form.Group>

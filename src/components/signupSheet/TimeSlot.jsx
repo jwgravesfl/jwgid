@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, List, Table, Header, Image, Label } from 'semantic-ui-react'
+import { Container, Table, Label } from 'semantic-ui-react'
 import TimeSlotForm from './TimeSlotForm'
 
 
@@ -16,6 +16,10 @@ const TimeSlotMainDiv = styled.div `
     margin-top: 5vh;
     border-radius: 10px;
   }
+
+  .tableHeader {
+    font-family: 'Homemade Apple', cursive;
+  }
 `
 
 export default class TimeSlot extends Component {
@@ -28,7 +32,7 @@ export default class TimeSlot extends Component {
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell></Table.HeaderCell>
-                <Table.HeaderCell textAlign="center">Performance Sign Up List</Table.HeaderCell>
+                <Table.HeaderCell textAlign="center" className='tableHeader' >Performance Sign Up List</Table.HeaderCell>
               </Table.Row>
             </Table.Header>
               <Table.Body>
