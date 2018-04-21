@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 import { Form, Button } from 'semantic-ui-react'
 
+import styled from 'styled-components'
+
+const TimeSlotFormMainDiv = styled.div `
+  width: 100%;
+  text-align: center;
+`
+
 export default class TimeSlotForm extends Component {
 
   constructor() {
@@ -49,6 +56,8 @@ export default class TimeSlotForm extends Component {
     const hasBeenTaken = this.state.hasBeenTaken
 
     return (
+      
+      <TimeSlotFormMainDiv>
       <span>
         {hasBeenTaken ?
           (
@@ -60,7 +69,7 @@ export default class TimeSlotForm extends Component {
             </span>
           ) : (
             <span>
-              <Form onSubmit={ this.onSubmit }>
+              <Form widths="equal" onSubmit={ this.onSubmit }>
                   <Form.Group inline>
                       <Form.Input 
                       fluid
@@ -94,7 +103,7 @@ export default class TimeSlotForm extends Component {
             </span>
           )}        
       </span>
-
+      </TimeSlotFormMainDiv>
     )
   }
 }

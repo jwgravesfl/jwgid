@@ -170,7 +170,7 @@ export default class HomeMainBody extends Component {
               <Header as='h3' className='segment4Post'>Do you have a role that needs filled?</Header>
               <p className="segment4Post">
                 With 20 years of business, technical and corporate experience, I will add value to any organization.  Having worked at the hightest level
-                of corporate America and having recently completed a BSAS degree from the University of South Florida with a 3.71GPA, I have a proven track record.  
+                of corporate America and having recently completed a BSAS degree from the University of South Florida with a 3.71 GPA, I have a proven track record.  
                 If you have a role that needs filled, I will be your best choice.  
               </p>
             </Container>
