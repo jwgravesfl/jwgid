@@ -3,7 +3,8 @@ import TextField from 'material-ui/TextField'
 import { MuiThemeProvider } from 'material-ui/styles'
 import MenuItem from 'material-ui/MenuItem'
 import axios from 'axios'
-import {SelectField} from 'material-ui'
+import { SelectField } from 'material-ui'
+import { Container } from 'semantic-ui-react'
 
 import ImageResults from '../image-results/ImageResults'
 
@@ -14,6 +15,14 @@ const PhotoGalleryDiv = styled.div`
 
     .photoGalleryContainer {
       
+    }
+
+    #labelImagesDisplay {
+      text-align: center
+      font-size: 170%;
+      font-family: 'Russo One', sans-serif
+      padding-top: 10vh
+      padding-bottom: 5vh
     }
 `
 
@@ -52,7 +61,11 @@ export default class Search extends Component {
      
       <PhotoGalleryDiv>
         <MuiThemeProvider>
+          <Container text>
           <div>
+            <div id="labelImagesDisplay">
+              Search Pixabay for Pro Royalty Free Images
+            </div>
             <TextField
               name="searchText"
               value={this.state.searchText}
@@ -78,6 +91,7 @@ export default class Search extends Component {
               <ImageResults images={this.state.images} />
             ) : null}
           </div>
+          </Container>
           </MuiThemeProvider>
       </PhotoGalleryDiv>
     )

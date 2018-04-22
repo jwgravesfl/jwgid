@@ -9,6 +9,10 @@ const SocialIconsDiv = styled.div`
         bottom: 20%;
         left: 0;
         background-color: ;
+
+        @media only screen and (max-width: 767px) {
+          bottom: 0;
+      }
     }
 
     .items {

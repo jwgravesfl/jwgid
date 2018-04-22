@@ -6,6 +6,8 @@ import ZoomIn from 'material-ui/svg-icons/action/zoom-in'
 import Dialog from 'material-ui/Dialog'
 import FlatButton from 'material-ui/FlatButton'
 
+
+
 export default class ImageResults extends Component {
   state = {
     open: false,
