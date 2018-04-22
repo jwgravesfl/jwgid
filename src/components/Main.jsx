@@ -4,6 +4,7 @@ import HomeMainBody from './homepage/HomeMainBody'
 
 import TimeSlot from './signupSheet/TimeSlot'
 import Github from './github/Github'
+import PictureGallery from './pictureGallery/search/Search'
 
 import styled from 'styled-components'
 
@@ -20,6 +21,7 @@ const Main = () => (
         <Route exact path='/' component={HomeMainBody} />
         <Route path='/timeslot' component={TimeSlot} />
         <Route path='/github' component={Github} />
+        <Route path='/picturegallery' component={PictureGallery} />
       </Switch>
     </main>
   </MainDiv>

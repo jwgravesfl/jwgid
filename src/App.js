@@ -35,8 +35,10 @@ class App extends Component {
     return (
       <AppDiv>
         <div className="appDivContainer">
-          <Home />
-          <SocialIcons />
+            <Home />
+          
+            <SocialIcons />
+          
         </div>
       </AppDiv>
     );
