@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN from '.'
 
 const axiosGitHubGraphQL = axios.create({
   baseURL: 'https://api.github.com/graphql',
   headers: {
-    Authorization: `bearer cfa1eb7c874aa45be49d5c2ea08b28c31234904a`,
+    Authorization: `bearer ${
+      process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN
+    }`,
   },
 });
 

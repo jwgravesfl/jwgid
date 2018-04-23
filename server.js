@@ -1,29 +1,20 @@
-const { graphqlExpress, graphiqlExpress } = require('apollo-server-express')
-const bodyParser = require('body-parser')
-const cors = require('cors')
-const express = require('express')
-const { makeExecutableSchema } = require('graphql-tools')
-
-const port = 9000
-
-const typeDefs = `
-    type Query {
-        greeting: String
-    }
-`
-
-const resolvers = {
-    Query: {
-        greeting: () => 'Hello World!'
-    }
-}
-
-
-
-const schema = makeExecutableSchema({typeDefs, resolvers})
-
-const app = express()
-app.use(cors(), bodyParser.json())
-app.use('/graphql', graphqlExpress({schema}))
-app.use('/graphiql', graphiqlExpress({endpointURL: '/graphql'}))
-app.listen(port, () => console.log(`Server running on port ${port}`))
+import express from 'express';
+import graphlHTTP from 'express-graphql';
+import mongoose from 'mongoose';
+import schema from './schema';
+const app = express();
+const PORT = 3000;
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/gql_db');
+app.get('/', (req, res) => {
+    res.json({
+        msg: 'Welcome to GraphQL'
+    })
+});
+app.use('/graphql', graphlHTTP({
+    schema: schema,
+    graphiql: true
+}));
+app.listen(PORT, () => {
+    console.log(`Server is listening on PORT ${PORT}`);
+});

@@ -13,16 +13,20 @@ import styled from 'styled-components'
 const PhotoGalleryDiv = styled.div`
       min-height: 100vh
 
-    .photoGalleryContainer {
-      
+    #photoGalleryContainer {
+      background-color: 
     }
 
     #labelImagesDisplay {
       text-align: center
       font-size: 170%;
-      font-family: 'Russo One', sans-serif
-      padding-top: 10vh
-      padding-bottom: 5vh
+      font-family: 'Anton', sans-serif;
+      margin-top: 10vh
+      margin-bottom: 5vh
+    }
+
+    .selectFieldNumerOfPhotos {
+      color: blue
     }
 `
 
@@ -62,7 +66,7 @@ export default class Search extends Component {
       <PhotoGalleryDiv>
         <MuiThemeProvider>
           <Container text>
-          <div>
+          <div id="photoGalleryContainer">
             <div id="labelImagesDisplay">
               Search Pixabay for Pro Royalty Free Images
             </div>
@@ -79,6 +83,7 @@ export default class Search extends Component {
               floatingLabelText="Amount"
               value={this.state.amount}
               onChange={this.onAmountChange}
+              className="selectFieldNumerOfPhotos"
             >
               <MenuItem value={5} primaryText="5" />
               <MenuItem value={10} primaryText="10" />
