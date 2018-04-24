@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const ProductPageDiv = styled.div`
     .productPageContainer {
-        background-color: red;
+        background-color: red
 
         @media only screen and (max-width: 767px) {
          

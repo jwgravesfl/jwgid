@@ -13,12 +13,12 @@ import imgLogo from '../../assets/IDDLogo.png'
 
 const ImgSpan = styled.span`
         img {
-          height: 5vh;
-          width: 5vh;
-          margin: 1vh;
-          position: absolute;
-          top: 0;
-          right: 0;
+          height: 5vh
+          width: 5vh
+          margin: 1vh
+          position: absolute
+          top: 0
+          right: 0
         }
 `
 

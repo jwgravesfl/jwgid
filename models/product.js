@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
-const Schema = mongoose.Schema;
+import mongoose from 'mongoose'
+const Schema = mongoose.Schema
 const ProductSchema = new Schema({
 title: {
         type: String,
@@ -8,5 +8,5 @@ title: {
     qty: {
         type: Number
     }
-});
+})
 export default mongoose.model('product', ProductSchema)

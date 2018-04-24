@@ -31,7 +31,7 @@ export const resolvers = {
         }) {
             return await Product.findOneAndRemove({
                 _id
-            });
+            })
         }
     }
 }

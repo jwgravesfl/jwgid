@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from 'react'
+import axios from 'axios'
 
 const axiosGitHubGraphQL = axios.create({
   baseURL: 'https://api.github.com/graphql',
@@ -8,7 +8,7 @@ const axiosGitHubGraphQL = axios.create({
       process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN
     }`,
   },
-});
+})
 
 const ORGANIZATION = `
   {
@@ -17,7 +17,7 @@ const ORGANIZATION = `
       url
     }
   }
-`;
+`
 
 export default class Github extends Component {
 
@@ -25,21 +25,21 @@ export default class Github extends Component {
         path: 'the-road-to-learn-react/the-road-to-learn-react',
         organization: null,
         errors: null,
-      };
+      }
     
       componentDidMount() {
-        this.onFetchFromGitHub();
+        this.onFetchFromGitHub()
       }
     
       onChange = event => {
-        this.setState({ path: event.target.value });
-      };
+        this.setState({ path: event.target.value })
+      }
     
       onSubmit = event => {
         // fetch data
     
-        event.preventDefault();
-      };
+        event.preventDefault()
+      }
 
       onFetchFromGitHub = () => {
         axiosGitHubGraphQL
@@ -50,12 +50,12 @@ export default class Github extends Component {
               errors: result.data.errors,
             })),
             console.log(this.state, this.props),
-          );
+          )
       }
 
     render(){
         
-        const { path, organization, errors } = this.state;
+        const { path, organization, errors } = this.state
 
       return (
           <div>
@@ -91,7 +91,7 @@ export default class Github extends Component {
           <strong>Something went wrong:</strong>
           {errors.map(error => error.message).join(' ')}
         </p>
-      );
+      )
     }
   
     return (
@@ -101,5 +101,5 @@ export default class Github extends Component {
           <a href={organization.url}>{organization.name}</a>
         </p>
       </div>
-    );
-  };
+    )
+  }

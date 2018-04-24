@@ -14,20 +14,20 @@ import imgLogo from '../../assets/IDDLogo.png'
 
 const ImgSpan = styled.span`
         img {
-          height: 5vh;
-          width: 5vh;
-          margin: 1vh;
-          position: absolute;
-          top: 0;
-          right: 0;
+          height: 5vh
+          width: 5vh
+          margin: 1vh
+          position: absolute
+          top: 0
+          right: 0
 
         }
 `
 
 const MobileHeadingDiv = styled.div`
   .mheadmenu {
-    min-height: 7vh;
-    padding: 1vh 1vh;
+    min-height: 7vh
+    padding: 1vh 1vh
   }
 `
 
