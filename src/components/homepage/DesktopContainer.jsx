@@ -48,6 +48,7 @@ export class DesktopContainer extends Component {
                 <Menu.Item><Link to="/timeslot">Sign Up Sheet</Link></Menu.Item>
                 <Menu.Item><Link to="/picturegallery">Photo Gallery</Link></Menu.Item>
                 <Menu.Item><Link to="/github">Repo Search - Under Construction</Link></Menu.Item>
+                <Menu.Item><a href="https://github.com/jwgravesfl/jwgid/blob/master/server.js">MERN GraphQL Server SetUp</a></Menu.Item>
                 
 
                 <ImgSpan>

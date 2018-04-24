@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN from '.'
 
 const axiosGitHubGraphQL = axios.create({
   baseURL: 'https://api.github.com/graphql',
@@ -20,7 +19,7 @@ const ORGANIZATION = `
   }
 `;
 
-export default class Footer extends Component {
+export default class Github extends Component {
 
     state = {
         path: 'the-road-to-learn-react/the-road-to-learn-react',
