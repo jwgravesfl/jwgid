@@ -24,16 +24,25 @@ export default class Footer extends Component {
           <Container>
             <Grid divided inverted stackable>
               <Grid.Row>
-                <Grid.Column width={7}>
+              <Grid.Column width={5}>
                   <Header inverted as='h4' content='Examples' />
                   <List inverted>
                     <List.Item><Link to="/timeslot">Sign Up Sheet</Link></List.Item>
                     <List.Item><Link to="/picturegallery">Photo Gallery</Link></List.Item>
                     <List.Item><a href="https://heatherlove.surge.sh">Heather Love Music</a></List.Item>
-                    <List.Item><a href="https://github.com/jwgravesfl/jwgid/blob/master/server.js">MERN GraphQL Server SetUp</a></List.Item>
+                    <List.Item><a href="https://github.com/jwgravesfl/jwgid/blob/master/server/server.js">MERN GraphQL Server SetUp</a></List.Item>
                   </List>
                 </Grid.Column>
-                <Grid.Column width={7}>
+                <Grid.Column width={5}>
+                  <Header inverted as='h4' content='Examples' />
+                  <List inverted>
+                    <List.Item><Link to="/github">Sign Up Sheet</Link></List.Item>
+                    <List.Item><Link to="/stickynote">Sticky Note Component</Link></List.Item>
+                    <List.Item><a href="https://informationdesignus.surge.sh">Coming Soon</a></List.Item>
+                    <List.Item><a href="https://informationdesignus.surge.sh">Coming Soon</a></List.Item>
+                  </List>
+                </Grid.Column>
+                <Grid.Column width={5}>
                   <Header as='h4' inverted>Happy to Help</Header>
                   <p>I look forward to working with you.  Please let me know if there is anything I can do to add value to you or your organization.</p>
                 </Grid.Column>

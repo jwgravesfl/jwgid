@@ -74,7 +74,7 @@ export default class StickyNote extends Component {
       <StickyNoteMainDiv>
         <ul>
           <li>
-            <a href="#">
+            <a href="">
               <h2>Title #1</h2>
               <p>Text Content #1</p>
             </a>
