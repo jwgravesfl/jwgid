@@ -111,7 +111,7 @@ export default class HomeMainBody extends Component {
                      Having emphasized education in my recent 2017 Information Architecture BSAS degree from the University 
                      of South Florida, explaining concepts using a learner centered approach provides the best chances for success.
                      Capitalizing on experiences from being a semi-professional musician, I have the ability to 
-                     empathize and connect with clients, collegues and co-workers.  
+                     empathize and connect with clients, colleagues and co-workers.  
                     </p>
                   </div>
                   <div className="segment2Card">

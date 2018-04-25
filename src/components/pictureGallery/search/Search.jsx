@@ -19,7 +19,7 @@ const PhotoGalleryDiv = styled.div`
 
     #labelImagesDisplay {
       text-align: center
-      font-size: 170%;
+      font-size: 200%;
       font-family: 'Anton', sans-serif;
       margin-top: 10vh
       margin-bottom: 5vh
@@ -28,7 +28,21 @@ const PhotoGalleryDiv = styled.div`
     .selectFieldNumerOfPhotos {
       color: blue
     }
+
+    .searchAmountDiv {
+      background-color: white
+      border-radius: 1vmax
+      padding: 1vmax
+    }
 `
+
+const styles = {
+  
+  floatingLabelStyle: {
+    color: "black",
+  },
+  
+};
 
 export default class Search extends Component {
   state = {
@@ -68,14 +82,16 @@ export default class Search extends Component {
           <Container text>
           <div id="photoGalleryContainer">
             <div id="labelImagesDisplay">
-              Search Pixabay for Pro Royalty Free Images
+              Search for Professional Royalty Free Images
             </div>
+            <div className="searchAmountDiv">
             <TextField
               name="searchText"
               value={this.state.searchText}
               onChange={this.onTextChange}
               floatingLabelText="Search For Images"
               fullWidth={true}
+              floatingLabelStyle={styles.floatingLabelStyle}
             />
             <br />
             <SelectField
@@ -92,6 +108,7 @@ export default class Search extends Component {
               <MenuItem value={50} primaryText="50" />
             </SelectField>
             <br />
+            </div>
             {this.state.images.length > 0 ? (
               <ImageResults images={this.state.images} />
             ) : null}

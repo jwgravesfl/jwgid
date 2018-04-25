@@ -1,5 +1,32 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import styled from 'styled-components'
+
+const GithubMainDiv = styled.div`
+    min-height: 100vh
+`
+
+const getIssuesOfRepositoryQuery = (organization, repository) => `
+  {
+    organization(login: "${organization}") {
+      name
+      url
+      repository(name: "${repository}") {
+        name
+        url
+        issues(last: 5) {
+          edges {
+            node {
+              id
+              title
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 const axiosGitHubGraphQL = axios.create({
   baseURL: 'https://api.github.com/graphql',
@@ -10,54 +37,55 @@ const axiosGitHubGraphQL = axios.create({
   },
 })
 
-const ORGANIZATION = `
-  {
-    organization(login: "the-road-to-learn-react") {
-      name
-      url
-    }
-  }
-`
+const getIssuesOfRepository = path => {
+  const [organization, repository] = path.split('/');
+
+  return axiosGitHubGraphQL.post('', {
+    query: getIssuesOfRepositoryQuery(organization, repository),
+  })
+}
+
+const resolveIssuesQuery = queryResult => () => ({
+  organization: queryResult.data.data.organization,
+  errors: queryResult.data.errors,
+})
 
 export default class Github extends Component {
 
     state = {
-        path: 'the-road-to-learn-react/the-road-to-learn-react',
+        path: '',
         organization: null,
         errors: null,
       }
     
       componentDidMount() {
-        this.onFetchFromGitHub()
+        this.onFetchFromGitHub(this.state.path)
       }
     
       onChange = event => {
         this.setState({ path: event.target.value })
+        console.log(this.state)
       }
     
       onSubmit = event => {
-        // fetch data
+        this.onFetchFromGitHub(this.state.path)
     
         event.preventDefault()
       }
 
-      onFetchFromGitHub = () => {
-        axiosGitHubGraphQL
-          .post('', { query: ORGANIZATION })
-          .then(result =>
-            this.setState(() => ({
-              organization: result.data.data.organization,
-              errors: result.data.errors,
-            })),
-            console.log(this.state, this.props),
-          )
-      }
+      onFetchFromGitHub = path => {
+        getIssuesOfRepository(path).then(queryResult =>
+          this.setState(resolveIssuesQuery(queryResult)),
+        );
+      };
 
     render(){
         
         const { path, organization, errors } = this.state
 
       return (
+
+        <GithubMainDiv>
           <div>
             <form onSubmit={this.onSubmit}>
                 <label htmlFor="url">
@@ -80,6 +108,7 @@ export default class Github extends Component {
           <p>No information yet ...</p>
         )}
           </div>
+          </GithubMainDiv>
       )
     }
   }
@@ -100,6 +129,25 @@ export default class Github extends Component {
           <strong>Issues from Organization:</strong>
           <a href={organization.url}>{organization.name}</a>
         </p>
+        <Repository repository={organization.repository} />
       </div>
     )
   }
+
+  const Repository = ({ repository }) => (
+    <div>
+      <p>
+        <strong>In Repository:</strong>
+        <a href={repository.url}>{repository.name}</a>
+      </p>
+  
+      <ul>
+        {repository.issues.edges.map(issue => (
+          <li key={issue.node.id}>
+            <a href={issue.node.url}>{issue.node.title}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+    
+  )
