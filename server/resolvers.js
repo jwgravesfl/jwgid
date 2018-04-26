@@ -1,4 +1,5 @@
-import Product from './models/product'
+import Product from '../models/product'
+
 export const resolvers = {
     Query: {
         async getProduct(root, {

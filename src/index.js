@@ -8,6 +8,27 @@ import { BrowserRouter } from 'react-router-dom'
 import styled from 'styled-components'
 import bgImg from './assets/gotgpp.jpg' 
 
+import ApolloClient from "apollo-boost"
+import gql from "graphql-tag";
+
+const client = new ApolloClient({
+  uri: "http://localhost:3000/graphql/"
+})
+
+client
+  .query({
+    query: gql`
+      {
+        allProducts {
+        title
+        _id
+        qty
+        }
+      }
+    `
+  })
+  .then(result => console.log(result));
+
 const IndexDiv = styled.div`
     .indexDivContainer {
       background-image: url(${bgImg});

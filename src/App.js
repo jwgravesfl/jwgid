@@ -33,14 +33,14 @@ class App extends Component {
   render() {
    
     return (
-      <AppDiv>
+    <AppDiv>
         <div className="appDivContainer">
             <Home />
           
             <SocialIcons />
           
         </div>
-      </AppDiv>
+    </AppDiv>
     );
   }
 }
