@@ -6,7 +6,16 @@ title: {
         required: true
     },
     qty: {
-        type: Number
+        type: Number,
+        required: true
+    },
+    imageURL: {
+        type: String,
+        required: true
+    },
+    productURL: {
+        type: String,
+        required: true
     }
 })
 export default mongoose.model('product', ProductSchema)

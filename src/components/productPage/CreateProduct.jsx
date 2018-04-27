@@ -25,15 +25,19 @@ const styles = {
         }
 
 const CREATE_PRODUCT = gql`
-        mutation createProduct($title: String!, $qty: Int!) {
+        mutation createProduct($title: String!, $qty: Int!, $imageURL: String!, $productURL: String!) {
             createProduct(input:{
                 title: $title,
-                qty: $qty
+                qty: $qty,
+                imageURL: $imageURL,
+                productURL: $productURL,
             })
             {
                 _id
                 title
                 qty
+                imageURL
+                productURL
             }
         }
 `
@@ -44,6 +48,8 @@ const CREATE_PRODUCT = gql`
       this.state = {
         title: '',
         qty: '',
+        imageURL: '',
+        productURL: '',
         clicked: false
       }
       this.handleChange = this.handleChange.bind(this);
@@ -59,9 +65,9 @@ const CREATE_PRODUCT = gql`
 
     handleKeyPress = (event) => {
         if (event.key === 'Enter') {
-          this.props.createProduct(this.state.title, this.state.qty);
+          this.props.createProduct(this.state.title, this.state.qty, this.state.imageURL, this.state.productURL);
           event.preventDefault()
-          this.setState({ title: '', qty: '' });
+          this.setState({ title: '', qty: '', imageURL: '', productURL: '' });
         }
       }    
 
@@ -87,6 +93,24 @@ const CREATE_PRODUCT = gql`
           style={styles.input}
           underlineFocusStyle={styles.underlineStyle}
         />
+        <TextField
+          value={this.state.imageURL}
+          onChange={this.handleChange}
+          onKeyPress={this.handleKeyPress}
+          fullWidth={true}
+          name="imageURL"
+          style={styles.input}
+          underlineFocusStyle={styles.underlineStyle}
+        />
+        <TextField
+          value={this.state.productURL}
+          onChange={this.handleChange}
+          onKeyPress={this.handleKeyPress}
+          fullWidth={true}
+          name="productURL"
+          style={styles.input}
+          underlineFocusStyle={styles.underlineStyle}
+        />
         </div>  
       </CreateProductDiv>
     )
@@ -95,9 +119,9 @@ const CREATE_PRODUCT = gql`
 
 const withCreateProduct = graphql(CREATE_PRODUCT, {
     props: ({ ownProps, mutate }) => ({
-      createProduct (title, qty) {
+      createProduct (title, qty, imageURL, productURL) {
         return mutate({
-          variables: { title, qty },
+          variables: { title, qty, imageURL, productURL },
         })
       },
     }),

@@ -6,6 +6,8 @@ type Product {
     _id: ID!
     title: String!
     qty: Int
+    imageURL: String!
+    productURL: String!
     }
 
 type Query {
@@ -16,6 +18,8 @@ type Query {
 input ProductInput {
     title: String!
     qty: Int
+    imageURL: String
+    productURL: String
     }
 
 type Mutation {
