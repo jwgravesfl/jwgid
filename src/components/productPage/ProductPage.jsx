@@ -3,6 +3,8 @@ import { Query } from "react-apollo";
 import gql from "graphql-tag";
 
 import styled from 'styled-components'
+import CreateProduct from './CreateProduct';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
  
 
@@ -45,11 +47,14 @@ const ProductPageDiv = styled.div`
 export default class ProductPage extends Component {
   render(){
     return (
-      <ProductPageDiv>
-        <div className="productPageContainer">
-          <Products/> 
-        </div>  
-      </ProductPageDiv>
+      <MuiThemeProvider>
+        <ProductPageDiv>
+          <div className="productPageContainer">
+            <CreateProduct/>
+            <Products/> 
+          </div>  
+        </ProductPageDiv>
+      </MuiThemeProvider>
     )
   }
 }
