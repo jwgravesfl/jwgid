@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Home } from './components/homepage/Home'
 import SocialIcons from './components/socialMedia/SocialIcons'
 
+
 import styled from 'styled-components'
 
 // async function loadGreeting() {

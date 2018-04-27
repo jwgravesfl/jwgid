@@ -8,21 +8,20 @@ import { BrowserRouter } from 'react-router-dom'
 import styled from 'styled-components'
 import bgImg from './assets/gotgpp.jpg' 
 
+import { ApolloProvider } from "react-apollo";
 import ApolloClient from "apollo-boost"
 import gql from "graphql-tag";
 
 const client = new ApolloClient({
-  uri: "http://localhost:3000/graphql/"
+  uri: "http://localhost:9000/graphql/"
 })
 
 client
   .query({
     query: gql`
       {
-        allProducts {
-        title
-        _id
-        qty
+        rates(currency: "USD") {
+          currency
         }
       }
     `
@@ -39,13 +38,15 @@ const IndexDiv = styled.div`
 `;
 
 ReactDOM.render(
+  <ApolloProvider client={client}>
     <IndexDiv>
         <div className="indexDivContainer">
             <BrowserRouter>
                 <App />
             </BrowserRouter>
         </div>
-    </IndexDiv>,
+    </IndexDiv>
+    </ApolloProvider>,
 
 document.getElementById('root'));
 registerServiceWorker();

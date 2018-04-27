@@ -5,7 +5,7 @@ import mongoose from 'mongoose'
 import schema from './schema'
 
 const app = express()
-const PORT = 3000
+const PORT = 9000
 mongoose.Promise = global.Promise
 mongoose.connect('mongodb://localhost/gql_db')
 app.get('/', (req, res) => {
