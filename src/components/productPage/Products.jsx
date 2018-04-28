@@ -4,28 +4,24 @@ import gql from "graphql-tag";
 import Card, { CardActions, CardMedia, CardHeader, CardTitle } from 'material-ui/Card'
 import FlatButton from 'material-ui/FlatButton'
 
+
 import styled from 'styled-components'
 
-const ProductsMainDiv = styled.div `
+const Wrapper = styled.span`
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1px;
+        background-color: black;
 
-    .cardContainter {
-        width: 10vh;
-
-        img {
-            width: 10vh;
-        }
-    }
-
-    .cardImage {
-        width: 10vh;
+    .productCard {
+        background-color: blue;
     }
 `
 
 export default class Products extends Component {
   render() {
     return (
-        <ProductsMainDiv>
-      <div>
+   
         <Query
             query={gql`
                 {
@@ -44,30 +40,19 @@ export default class Products extends Component {
                 if (error) return <p>Error :(</p>;
         
                 return data.allProducts.map(({ title, qty, _id, imageURL, productURL }) => (
-                <span key={_id}>
-                        <Card className="cardContainer">
-                            <CardHeader
-                            title={title}
-                            subtitle={qty}
-                            />
-                            <CardMedia
-                            overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
-                            >
-                            <a href={productURL}><img src={imageURL} alt="" className="cardImage"/></a>
-                            </CardMedia>
-                            <CardActions>
-                            <FlatButton label="Action1" />
-                            <FlatButton label="Action2" />
-                            </CardActions>
-                        </Card>
-
-                    <p>{`${title}: ${qty}: ${imageURL}: ${productURL} `}</p>
-                </span>
+                <Wrapper>
+                    <div className="productCard">
+                        
+                                {title}
+                                {qty}
+                                
+                           
+                    </div>
+                    </Wrapper>
                 ));
             }}
         </Query>
-      </div>
-      </ProductsMainDiv>
+ 
     )
   }
 }

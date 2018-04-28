@@ -9,7 +9,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 const ProductPageDiv = styled.div`
     .productPageContainer {
-        background-color: red
+        background-color: 
 
         @media only screen and (max-width: 767px) {
          
