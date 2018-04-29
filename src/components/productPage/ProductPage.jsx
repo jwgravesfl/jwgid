@@ -24,6 +24,7 @@ export default class ProductPage extends Component {
       <MuiThemeProvider>
         <ProductPageDiv>
           <div className="productPageContainer">
+            <CreateProduct/>
             <Products/> 
           </div>  
         </ProductPageDiv>

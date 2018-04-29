@@ -40,7 +40,7 @@ export default class Products extends Component {
                 return data.allProducts.map(({ title, qty, _id, imageURL, productURL }) => (
                
                        <Wrapper className="wrapper" key={_id}>
-                            <Card className="cardContainer">
+                            <Card>
                                 <CardHeader
                                 title={title}
                                 subtitle={qty}

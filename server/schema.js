@@ -17,9 +17,9 @@ type Query {
 
 input ProductInput {
     title: String!
-    qty: Int
-    imageURL: String
-    productURL: String
+    qty: Int!
+    imageURL: String!
+    productURL: String!
     }
 
 type Mutation {
