@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
-
+import { Grid } from 'semantic-ui-react'
+import Card, { CardActions, CardMedia, CardHeader, CardTitle } from 'material-ui/Card'
+import FlatButton from 'material-ui/FlatButton'
 
 
 import styled from 'styled-components'
+
+const GridColumnMainDiv = styled.div `
+    padding: 1em;
+`
 
 
 const getProducts = gql`
@@ -20,32 +26,7 @@ const getProducts = gql`
 `
 
 const ProductsMainDiv = styled.div `
-        text-align: center;
-
-        .productsContainer {
-            margin-left: 15%;
-            margin-right: 15%;
-            text-align: justify;
-            
-            @media only screen and (max-width: 900px) {
-                margin-left: 0;
-                margin-right: 0;
-            }
-        }
-
-        .productCard {
-            background-color: yellow; 
-            float: left;
-            width: 33vw;
-            height: 33vw;
-            border: black solid 5px;
-            
-
-            @media only screen and (max-width: 900px) {
-                width: 50%;
-                height: 50%;
-            }
-        }
+  
 `
 
 export default class Products extends Component {
@@ -61,16 +42,27 @@ export default class Products extends Component {
                 if (error) return <p>Error :(</p>;
         
                 return data.allProducts.map(({ title, qty, _id, imageURL, productURL }) => (
-                    <ProductsMainDiv key={_id}>
-                        <a href={productURL}><div className="productsContainer">
-                        <div className="productCard" style={{ backgroundImage: `url(${imageURL})` }}>
-                            {title}
-                            {qty}
-                        </div>
-                        </div>
-                        </a>
-                    </ProductsMainDiv>
-
+                        <Grid.Column 
+                            
+                            >
+                            <GridColumnMainDiv>
+                                <Card>
+                                    <CardHeader
+                                    title={title}
+                                    subtitle={qty}
+                                    />
+                                    <CardMedia
+                                    overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
+                                    >
+                                    <a href={productURL}></a>
+                                    </CardMedia>
+                                    <CardActions>
+                                        <FlatButton label="Action1" />
+                                        <FlatButton label="Action2" />
+                                    </CardActions>
+                                </Card>
+                            </GridColumnMainDiv>
+                       </Grid.Column>
                 ));
             }}
         </Query>

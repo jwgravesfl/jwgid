@@ -4,6 +4,7 @@ import Products from './Products'
 import styled from 'styled-components'
 import CreateProduct from './CreateProduct';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import { Container, Grid } from 'semantic-ui-react'
 
  
 
@@ -24,8 +25,12 @@ export default class ProductPage extends Component {
       <MuiThemeProvider>
         <ProductPageDiv>
           <div className="productPageContainer">
+          <Container>
             <CreateProduct/>
-            <Products/> 
+            <Grid columns={3}>
+              <Products/> 
+            </Grid>
+          </Container>
           </div>  
         </ProductPageDiv>
       </MuiThemeProvider>
