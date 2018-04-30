@@ -27,7 +27,7 @@ export default class ProductPage extends Component {
           <div className="productPageContainer">
           <Container>
             <CreateProduct/>
-            <Grid columns={3}>
+            <Grid columns={1}>
               <Products/> 
             </Grid>
           </Container>

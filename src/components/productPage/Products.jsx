@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import { Grid } from 'semantic-ui-react'
-import Card, { CardActions, CardMedia, CardHeader, CardTitle } from 'material-ui/Card'
-import FlatButton from 'material-ui/FlatButton'
+import Card, { CardActions, CardMedia, CardTitle } from 'material-ui/Card'
+import RaisedButton from 'material-ui/RaisedButton'
 
 
 import styled from 'styled-components'
@@ -25,10 +25,6 @@ const getProducts = gql`
 }
 `
 
-const ProductsMainDiv = styled.div `
-  
-`
-
 export default class Products extends Component {
   render() {
     return (
@@ -43,22 +39,25 @@ export default class Products extends Component {
         
                 return data.allProducts.map(({ title, qty, _id, imageURL, productURL }) => (
                         <Grid.Column 
-                            
+                            key={_id}
                             >
                             <GridColumnMainDiv>
-                                <Card>
-                                    <CardHeader
-                                    title={title}
-                                    subtitle={qty}
-                                    />
+                                <Card 
+                                    expandable
+                                    style={{ height: '30vh'}}
+                                    >
+                                    
                                     <CardMedia
-                                    overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
+                                    expandable
+                                    overlay={<CardTitle title={title} subtitle={qty} />}
                                     >
                                     <a href={productURL}></a>
                                     </CardMedia>
-                                    <CardActions>
-                                        <FlatButton label="Action1" />
-                                        <FlatButton label="Action2" />
+                                    <CardActions
+                                    showExpandableButton
+                                    >
+                                        
+                                        <RaisedButton label="Default" style={{textSize: '100%'}} />
                                     </CardActions>
                                 </Card>
                             </GridColumnMainDiv>
