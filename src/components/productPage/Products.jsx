@@ -1,36 +1,31 @@
 import React, { Component } from 'react'
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
-import { Grid } from 'semantic-ui-react'
-import Card, { CardActions, CardMedia, CardTitle } from 'material-ui/Card'
+import Card, { CardMedia, CardTitle } from 'material-ui/Card'
+import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 
 
 import styled from 'styled-components'
 
 const GridColumnMainDiv = styled.div `
-    padding: ;
-    background-color: red;
+    background-color: ;
     text-align: center;
+    width: 100%;
+    height: 100%;
 
-    .inventoryButton {
-        position: absolute;
-            bottom: 0;
-            right: 0;
+   }
+
+    .qtyTextField {
+    }
+
+    .buttonGroup {
+      text-align: right;
+      background-color: ;  
     }
     
-        img {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            top: 0;
-            left: 0;
-        }
-
-    .inventoryButton {
-        position: absolute;
-            bottom: 10%;
-            right: 0;
+    .raisedButton {
+        
     }
 `
 
@@ -48,6 +43,7 @@ const getProducts = gql`
 `
 
 export default class Products extends Component {
+
   render() {
     return (
    
@@ -60,22 +56,32 @@ export default class Products extends Component {
                 if (error) return <p>Error :(</p>;
         
                 return data.allProducts.map(({ title, qty, _id, imageURL, productURL }) => (
-                        <Grid.Column 
-                            key={_id}
-                            >
-                            <GridColumnMainDiv>
-                                <Card 
-                                    style={{ height: '100%', width: '100%'}}
+                        
+                            <GridColumnMainDiv key={_id}>
+                                <Card>
+                                <CardMedia
+                                    overlay={<CardTitle title="Name of Product" subtitle={title} />}
                                     >
-                                    <img src={imageURL} style={{ width: '100%', height: '100%' }}/>
-                                     
-                                    <CardActions                                   
-                                    >
-                                    <RaisedButton className="inventoryButton" label="Inventory" style={{textSize: '100%'}} />
-                                    </CardActions>
-                                </Card>
+                                        <img src={imageURL} alt="" />
+                                </CardMedia>
+                                    <div className="buttonGroup">
+                                        <TextField
+                                            defaultValue={qty}
+                                            name="qty"
+                                            style={{width: '4em', textAlign: 'right', marginRight: '1em', backgroundColor: ''}}
+                                            inputStyle={{ textAlign: 'right' }}
+                                            floatingLabelText="Inventory"
+                                            floatingLabelStyle={{ color: 'black' }}
+                                            className="qtyTextField"
+                                            />
+                                        <RaisedButton
+                                            style={{ marginBottom: '1em', marginRight: '1em' }}
+                                            >
+                                            Update
+                                        </RaisedButton>
+                                    </div>
+                                </Card>  
                             </GridColumnMainDiv>
-                       </Grid.Column>
                 ));
             }}
         </Query>

@@ -1,5 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+Todo List:
+Update Readme page
+Product Page CSS
+Create Inventory Update Component
+Create Product Info Update Component
+
+
 #Portfolio Page for **J. Wayne Graves**
 [J. Graves React Ecosystem Portfolio](https://github.com/jwgravesfl/jwgid) 
 React Ecosystem Full Stack Progressive Web App

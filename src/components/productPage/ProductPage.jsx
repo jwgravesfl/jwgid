@@ -4,7 +4,7 @@ import Products from './Products'
 import styled from 'styled-components'
 import CreateProduct from './CreateProduct';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import { Container, Grid } from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react'
 
  
 
@@ -18,10 +18,13 @@ const ProductPageDiv = styled.div`
     }
 
     .productCssGridContainer {
-      padding: 1em;
+      padding: ;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 1em;
+      grid-gap: 1vw;
+      grid-auto-rows: calc(
+        80vw - 40px * 1 - 1 / 1
+      )
 
       @media only screen and (max-width: 900px) {
         grid-template-columns: 1fr 1fr;
