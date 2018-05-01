@@ -54,7 +54,7 @@ export class MobileContainer extends Component {
             <Menu.Item><Link to="/" onClick={this.handleToggle}>Home</Link></Menu.Item>
             <Menu.Item><Link to="/timeslot" onClick={this.handleToggle}>Sign Up Sheet</Link></Menu.Item>
             <Menu.Item><Link to="/picturegallery" onClick={this.handleToggle}>Photo Gallery</Link></Menu.Item>
-            <Menu.Item><Link to="/github" onClick={this.handleToggle}>Github API Search - GraphQL</Link></Menu.Item>
+            <Menu.Item><a href="https://informationdesignus.surge.sh/github">Github API Search - GraphQL</a></Menu.Item>
             <Menu.Item><a href="https://github.com/jwgravesfl/jwgid/blob/master/server/" onClick={this.handleToggle}>MERN GraphQL Server and Product API SetUp</a></Menu.Item>
 
             

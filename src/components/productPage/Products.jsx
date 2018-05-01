@@ -9,7 +9,29 @@ import RaisedButton from 'material-ui/RaisedButton'
 import styled from 'styled-components'
 
 const GridColumnMainDiv = styled.div `
-    padding: 1em;
+    padding: ;
+    background-color: red;
+    text-align: center;
+
+    .inventoryButton {
+        position: absolute;
+            bottom: 0;
+            right: 0;
+    }
+    
+        img {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+    .inventoryButton {
+        position: absolute;
+            bottom: 10%;
+            right: 0;
+    }
 `
 
 
@@ -43,21 +65,13 @@ export default class Products extends Component {
                             >
                             <GridColumnMainDiv>
                                 <Card 
-                                    expandable
-                                    style={{ height: '30vh'}}
+                                    style={{ height: '100%', width: '100%'}}
                                     >
-                                    
-                                    <CardMedia
-                                    expandable
-                                    overlay={<CardTitle title={title} subtitle={qty} />}
+                                    <img src={imageURL} style={{ width: '100%', height: '100%' }}/>
+                                     
+                                    <CardActions                                   
                                     >
-                                    <a href={productURL}></a>
-                                    </CardMedia>
-                                    <CardActions
-                                    showExpandableButton
-                                    >
-                                        
-                                        <RaisedButton label="Default" style={{textSize: '100%'}} />
+                                    <RaisedButton className="inventoryButton" label="Inventory" style={{textSize: '100%'}} />
                                     </CardActions>
                                 </Card>
                             </GridColumnMainDiv>

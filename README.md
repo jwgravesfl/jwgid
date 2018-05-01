@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 React Ecosystem Full Stack Progressive Web App
 React, Node, GraphQL, Express, MongoDB
 
-See [Demo](https://informationdesignus.surge.sh)
+See [Demo](https://fast-hollows-60238.herokuapp.com/)
 
 
 J. Graves example Portfolio Projects:

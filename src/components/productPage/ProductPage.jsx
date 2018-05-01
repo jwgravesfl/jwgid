@@ -16,6 +16,21 @@ const ProductPageDiv = styled.div`
          
       }
     }
+
+    .productCssGridContainer {
+      padding: 1em;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1em;
+
+      @media only screen and (max-width: 900px) {
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      @media only screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+      }
+    }
 `
   
 
@@ -25,11 +40,13 @@ export default class ProductPage extends Component {
       <MuiThemeProvider>
         <ProductPageDiv>
           <div className="productPageContainer">
-          <Container>
+          <Container
+            textAlign="center"
+            >
             <CreateProduct/>
-            <Grid columns={1}>
-              <Products/> 
-            </Grid>
+            <div className="productCssGridContainer">
+              <Products />
+            </div>
           </Container>
           </div>  
         </ProductPageDiv>
