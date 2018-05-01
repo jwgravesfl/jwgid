@@ -1,9 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Todo List:
-Update Readme page
-Product Page CSS
-Create Inventory Update Component
+Update Readme page 
+Create Inventory Update Component - 
 Create Product Info Update Component
 
 
@@ -16,6 +15,8 @@ See [Demo](https://fast-hollows-60238.herokuapp.com/)
 
 
 J. Graves example Portfolio Projects:
+
+**Main Project** Inventory System
 
 **Step by Step React setup from scratch:** commits: https://github.com/jwgravesfl/ReactFromScratch/commits/master
   Step by Step Commits to github showing the steps to creating a React app from scratch.

@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import Card, { CardMedia, CardTitle } from 'material-ui/Card'
-import TextField from 'material-ui/TextField'
-import RaisedButton from 'material-ui/RaisedButton'
+
+import UpdateInventory from './UpdateInventory'
 
 
 import styled from 'styled-components'
@@ -60,26 +60,16 @@ export default class Products extends Component {
                             <GridColumnMainDiv key={_id}>
                                 <Card>
                                 <CardMedia
-                                    overlay={<CardTitle title="Name of Product" subtitle={title} />}
-                                    >
-                                        <img src={imageURL} alt="" />
-                                </CardMedia>
-                                    <div className="buttonGroup">
-                                        <TextField
-                                            defaultValue={qty}
-                                            name="qty"
-                                            style={{width: '4em', textAlign: 'right', marginRight: '1em', backgroundColor: ''}}
-                                            inputStyle={{ textAlign: 'right' }}
-                                            floatingLabelText="Inventory"
-                                            floatingLabelStyle={{ color: 'black' }}
-                                            className="qtyTextField"
-                                            />
-                                        <RaisedButton
-                                            style={{ marginBottom: '1em', marginRight: '1em' }}
-                                            >
-                                            Update
-                                        </RaisedButton>
+                                    overlay={
+                                    <div id="productOverlay">
+                                    <CardTitle title="Name of Product" subtitle={title} />
+                                    <UpdateInventory qty={ qty }/>
                                     </div>
+                                    }
+                                    >
+                                        <img src={imageURL} alt="imageURL" />
+                                </CardMedia>
+                                    
                                 </Card>  
                             </GridColumnMainDiv>
                 ));
