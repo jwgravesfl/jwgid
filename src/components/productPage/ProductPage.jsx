@@ -22,9 +22,7 @@ const ProductPageDiv = styled.div`
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 1vw;
-      grid-auto-rows: calc(
-        80vw - 40px * 1 - 1 / 1
-      )
+      
 
       @media only screen and (max-width: 900px) {
         grid-template-columns: 1fr 1fr;

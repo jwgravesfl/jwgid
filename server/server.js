@@ -1,13 +1,13 @@
-import express from 'express'
-import graphlHTTP from 'express-graphql'
+const express = require('express')
+const graphlHTTP = require('express-graphql')
 const cors = require('cors')
-import mongoose from 'mongoose'
-import schema from './schema'
+const mongoose = require('mongoose')
+const schema = require('./schema')
 
 const app = express()
 const PORT = 9000
 mongoose.Promise = global.Promise
-mongoose.connect('mongodb://jadmin:ggtr554T@ds263989.mlab.com:63989/heroku_kgrvdt9g')
+mongoose.connect('mongodb://localhost/gql_db')
 app.get('/', (req, res) => {
     res.json({
         msg: 'Welcome to GraphQL'
@@ -18,6 +18,6 @@ app.use('/graphql', graphlHTTP({
     schema: schema,
     graphiql: true
 }))
-app.listen(process.env.PORT || {PORT}, function() {
-    console.log('Express server is up and running on PORT ${PORT}!');
-  });
+app.listen(PORT, () => {
+    console.log(`Server is listening on PORT ${PORT}`)
+}) 
