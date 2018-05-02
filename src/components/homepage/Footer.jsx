@@ -39,7 +39,7 @@ export default class Footer extends Component {
                     <List.Item><Link to="/stickynote">Product Page Demo - GraphQL</Link></List.Item>
                     <List.Item><a href="https://informationdesignus.surge.sh/github">Github API Search - GraphQL</a></List.Item>
                     <List.Item><Link to="/stickynote">Sticky Note Component</Link></List.Item>
-                    <List.Item><a href="https://informationdesignus.surge.sh">Coming Soon</a></List.Item>
+                    <List.Item><Link to="/productpage">Inventory Tracker</Link></List.Item>
                   </List>
                 </Grid.Column>
                 <Grid.Column width={5}>

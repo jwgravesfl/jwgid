@@ -45,6 +45,7 @@ export class DesktopContainer extends Component {
             >
               <Container>
                 <Menu.Item><Link to="/">Home</Link></Menu.Item>
+                <Menu.Item><Link to="/productpage">Inventory Tracker</Link></Menu.Item>
                 <Menu.Item><Link to="/timeslot">Sign Up Sheet</Link></Menu.Item>
                 <Menu.Item><Link to="/picturegallery">Photo Gallery</Link></Menu.Item>
                 <Menu.Item><a href="https://informationdesignus.surge.sh/github">Github API Search - GraphQL</a></Menu.Item>

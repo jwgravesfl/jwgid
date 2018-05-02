@@ -52,6 +52,7 @@ export class MobileContainer extends Component {
         <Sidebar.Pushable>
           <Sidebar as={Menu} animation='uncover' inverted vertical visible={sidebarOpened}>
             <Menu.Item><Link to="/" onClick={this.handleToggle}>Home</Link></Menu.Item>
+            <Menu.Item><Link to="/productpage">Inventory Tracker</Link></Menu.Item>
             <Menu.Item><Link to="/timeslot" onClick={this.handleToggle}>Sign Up Sheet</Link></Menu.Item>
             <Menu.Item><Link to="/picturegallery" onClick={this.handleToggle}>Photo Gallery</Link></Menu.Item>
             <Menu.Item><a href="https://informationdesignus.surge.sh/github">Github API Search - GraphQL</a></Menu.Item>

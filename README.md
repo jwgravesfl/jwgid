@@ -11,7 +11,7 @@ Create Product Info Update Component
 React Ecosystem Full Stack Progressive Web App
 React, Node, GraphQL, Express, MongoDB
 
-See [Demo](https://fast-hollows-60238.herokuapp.com/)
+See [Demo](https://mysterious-lake-23700.herokuapp.com/)
 
 
 J. Graves example Portfolio Projects:
