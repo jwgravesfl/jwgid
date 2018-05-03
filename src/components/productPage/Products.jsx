@@ -3,7 +3,7 @@ import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import Card, { CardMedia, CardTitle } from 'material-ui/Card'
 
-import UpdateInventory from './UpdateInventory'
+// import UpdateInventory from './UpdateInventory'
 
 
 import styled from 'styled-components'
@@ -41,7 +41,7 @@ const getProducts = gql`
     }
 }
 `
-
+// <UpdateInventory qty={ qty }/>
 export default class Products extends Component {
 
   render() {
@@ -63,7 +63,7 @@ export default class Products extends Component {
                                     overlay={
                                     <div id="productOverlay">
                                     <CardTitle title="Name of Product" subtitle={title} />
-                                    <UpdateInventory qty={ qty }/>
+                                    
                                     </div>
                                     }
                                     >
