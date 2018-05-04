@@ -5,9 +5,9 @@ const mongoose = require('mongoose')
 const schema = require('./schema')
 
 const app = express()
-const PORT = 9000
+const PORT = 8080
 mongoose.Promise = global.Promise
-mongoose.connect('mongodb://127.0.0.1:27017/gql_db')
+mongoose.connect('mongodb://jadmin:ggtr554T@localhost:27017/admin')
 app.get('/', (req, res) => {
     res.json({
         msg: 'Welcome to GraphQL'
