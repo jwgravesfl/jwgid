@@ -51,19 +51,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### **React/GraphQL Inventory Page (client):** 
 #### code: https://github.com/jwgravesfl/jwgid/tree/master/src/components/productPage
 
-#### Create Product Component, Query and List Product, coming soon.... Update Product Inventory, Delete Product.
-GraphQL, Apollo, CRUD 
-
-####   Front End Items needed for Inventory System  **In Progress**
-##### In Progrss    Inventory Items Page
-- [x] Working         Create Inventory Item
-- [x] Working         List Items
-- [ ] In Progress     Update Inventory Item Qty
+#### Front End Items needed for Inventory System  **In Progress**
+- [ ] Inventory Items Page **In Progress**
+- [x] Create Inventory Item
+- [x] List Items
+- [ ] Update Inventory Item Qty **In Progress**
 - [ ] Update Inventory Item Detail Information
 - [ ] Delete Inventory Item
 
-### **Step by Step React setup from scratch:** commits: https://github.com/jwgravesfl/ReactFromScratch/commits/master
-#####   Step by Step Commits to github showing the steps to creating a React app from scratch.
+### **Step by Step React setup from scratch:** 
+####   code: commits: https://github.com/jwgravesfl/ReactFromScratch/commits/master
+- Step by Step Commits to github showing the steps to creating a React app from scratch.
 
 ### **Picture Gallery of Royalty Free Images:** https://informationdesignus.surge.sh/picturegallery
 ####   code: https://github.com/jwgravesfl/jwgid/tree/master/src/components/pictureGallery
