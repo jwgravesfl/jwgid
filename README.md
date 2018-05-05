@@ -36,44 +36,45 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### **Node.js/Express/MongoDB/GraphQL Inventory API (server):**
 #### Back End Items needed for Inventory System  **Complete**
-##### Working      Node.js/Express Server server.js
-##### Working       GraphQL Back End
-##### Working      Schema.js  
-##### Working      Resolvers.js
-##### Working      Create Inventory Item
-##### Working      AllProducts Query
-##### Working      GetProduct Query
-##### Working      Update Inventory Item
-##### Working      Delete Inventory Item
+- [x] Node.js/Express Server server.js
+- [x] GraphQL Back End
+- [x] Schema.js  
+- [x] Resolvers.js
+- [x] Create Inventory Item
+- [x] AllProducts Query
+- [x] GetProduct Query
+- [x] Update Inventory Item
+- [x] Delete Inventory Item
 
 ##### Working      Deploy Back End [Back End Deployed Using .Now](https://gql-api-kdwnwzplsd.now.sh)
 
 ### **React/GraphQL Inventory Page (client):** 
 #### code: https://github.com/jwgravesfl/jwgid/tree/master/src/components/productPage
-#####   Create Product Component, Query and List Product, coming soon.... Update Product Inventory, Delete Product.
-#####   GraphQL, Apollo, CRUD 
+
+#### Create Product Component, Query and List Product, coming soon.... Update Product Inventory, Delete Product.
+GraphQL, Apollo, CRUD 
 
 ####   Front End Items needed for Inventory System  **In Progress**
 ##### In Progrss    Inventory Items Page
-##### Working         Create Inventory Item
-##### Working         List Items
-##### In Progress     Update Inventory Item Qty
-#####                 Update Inventory Item Detail Information
-#####                 Delete Inventory Item
+- [x] Working         Create Inventory Item
+- [x] Working         List Items
+- [ ] In Progress     Update Inventory Item Qty
+- [ ] Update Inventory Item Detail Information
+- [ ] Delete Inventory Item
 
 ### **Step by Step React setup from scratch:** commits: https://github.com/jwgravesfl/ReactFromScratch/commits/master
 #####   Step by Step Commits to github showing the steps to creating a React app from scratch.
 
 ### **Picture Gallery of Royalty Free Images:** https://informationdesignus.surge.sh/picturegallery
 ####   code: https://github.com/jwgravesfl/jwgid/tree/master/src/components/pictureGallery
-#####   Standard API call to Pixabay.    
-#####   Proptypes, Axios, Material-UI
+- Standard API call to Pixabay.    
+- Proptypes, Axios, Material-UI
 
 ### **Github Organization Repository Issue GraphQL Query:** https://informationdesignus.surge.sh/github
 ####  code: https://github.com/jwgravesfl/jwgid/blob/master/src/components/github/Github.jsx
-#####   Front End Github API call displaying open issues.  
-#####   Axios, GraphQL
+- Front End Github API call displaying open issues.  
+- Axios, GraphQL
 
 ### **Open Mike Sign Up Sheet:**  https://informationdesignus.surge.sh/timeslot
 ####   code: https://github.com/jwgravesfl/jwgid/tree/master/src/components/signupSheet
-#####   Front End only showing state management and conditionals.
+- Front End only showing state management and conditionals.
