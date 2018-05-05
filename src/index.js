@@ -12,7 +12,7 @@ import { ApolloProvider } from "react-apollo";
 import ApolloClient from "apollo-boost"
 
 const client = new ApolloClient({
-  uri: "http://localhost:8080/graphql/"
+  uri: "https://gql-api-kdwnwzplsd.now.sh/graphql"
 })
 
 const IndexDiv = styled.div`
