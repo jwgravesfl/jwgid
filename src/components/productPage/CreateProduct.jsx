@@ -4,10 +4,16 @@ import TextField from 'material-ui/TextField'
 import { graphql } from 'react-apollo';
 
 import styled from 'styled-components'
+import Subheader from 'material-ui/Subheader'
 
 const CreateProductDiv = styled.div`
+
+      margin-bottom: 10em;
+
     .createProductContainer {
         background-color: yellow;
+
+        
 
         @media only screen and (max-width: 767px) {
          
@@ -17,7 +23,7 @@ const CreateProductDiv = styled.div`
 
 const styles = {
             input: {
-            fontSize: 20,
+            fontSize: '100%',
             },
             underlineStyle: {
             borderColor: '#e91e63'
@@ -41,6 +47,18 @@ const CREATE_PRODUCT = gql`
             }
         }
 `
+
+        const floatingLabelTextJSS = {
+          fontFamily: 'Rock Salt, cursive',
+          marginLeft: '10vw',
+          textAlign: 'left'
+        }
+
+        const subheaderText = {
+          fontFamily: 'Rock Salt, cursive',
+          textAlign: 'left', 
+          textWeight: 'bold'
+        }
 
  class CreateProduct extends Component {
     constructor() {
@@ -75,6 +93,11 @@ const CREATE_PRODUCT = gql`
     return (
     <CreateProductDiv>
       <div className="createProductContainer">
+      <Subheader
+        style={ subheaderText }
+        >
+        Enter New Product:   Name, Qty, Path to Product Image, Path to Product Detail Page
+      </Subheader>
         <TextField
             value={this.state.title}
             onChange={this.handleChange}
@@ -83,6 +106,8 @@ const CREATE_PRODUCT = gql`
             name="title"
             style={styles.input}
             underlineFocusStyle={styles.underlineStyle}
+            floatingLabelText="Name of Product"
+            floatingLabelStyle={floatingLabelTextJSS}
             />
         <TextField
           value={this.state.qty}
@@ -92,6 +117,8 @@ const CREATE_PRODUCT = gql`
           name="qty"
           style={styles.input}
           underlineFocusStyle={styles.underlineStyle}
+          floatingLabelText="Inventory"
+          floatingLabelStyle={floatingLabelTextJSS}
         />
         <TextField
           value={this.state.imageURL}
@@ -101,6 +128,8 @@ const CREATE_PRODUCT = gql`
           name="imageURL"
           style={styles.input}
           underlineFocusStyle={styles.underlineStyle}
+          floatingLabelText="Image of Product"
+          floatingLabelStyle={floatingLabelTextJSS}
         />
         <TextField
           value={this.state.productURL}
@@ -110,6 +139,8 @@ const CREATE_PRODUCT = gql`
           name="productURL"
           style={styles.input}
           underlineFocusStyle={styles.underlineStyle}
+          floatingLabelText="Product Detail"
+          floatingLabelStyle={floatingLabelTextJSS}
         />
         </div>  
       </CreateProductDiv>
