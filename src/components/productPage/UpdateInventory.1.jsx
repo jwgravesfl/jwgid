@@ -2,10 +2,9 @@ import React, { Component } from 'react'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 import gql from "graphql-tag"
-import { Mutation } from "react-apollo"
 
-const UPDATE_PRODUCT = gql`
-    mutation updateProduct{
+const updateProduct = gql`
+    mutation{
         updateProduct(_id: $_id,input:{
             title: $title,
             qty: $qty,
@@ -43,17 +42,16 @@ handleChange = (event) => {
     console.log(this.state, this.props)
 }
 
- onSubmit = e => {
+ onSubmit = (e) => {
     e.preventDefault(); 
-    this.props.updateProduct({ variables: { _id: this.state._id, title: this.state.title, qty: this.state.qty, imageURL: this.state.imageURL, productURL: this.state.productURL}});
-    console.log(this.state, this.props); 
+    updateProduct({ variables: { id: this.props.id } }(this.state.title, this.state.qty, this.state.imageURL, this.state.productURL));
+     
    }
    
     render() {
 
         return(
-            <Mutation mutation={UPDATE_PRODUCT} key={this.state._id}>  
-            {updateProduct => (
+            
             <form onSubmit={this.onSubmit}>
                 <div className="buttonGroup">
                     <TextField
@@ -74,8 +72,7 @@ handleChange = (event) => {
                     </RaisedButton>
                 </div>
             </form>
-            )}
-            </Mutation>
+            
         );
     }
 }

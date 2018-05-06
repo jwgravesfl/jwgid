@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import CreateProduct from './CreateProduct';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { Container } from 'semantic-ui-react'
+import AddInventoryButton from 'material-ui/svg-icons/content/add-circle'
+import CloseAddInventoryButton from 'material-ui/svg-icons/navigation/close'
 
  
 
@@ -32,11 +34,48 @@ const ProductPageDiv = styled.div`
         grid-template-columns: 1fr;
       }
     }
+
+    .inventoryButton {
+      position: absolute;
+      top: 10%;
+      right: 10%;
+     
+    }
+
 `
+
+const styles = {
+  addCloseInventoryStyles: {
+    width: '10vh',
+    height: '10vh'
+  },
+}
   
 
 export default class ProductPage extends Component {
+  constructor() {
+    super()
+    this.state = {
+      showCreateProduct: false,  
+    }
+    this.handleAddInventoryClick = this.handleAddInventoryClick.bind(this)
+  }
+
+  handleAddInventoryClick = (e) => {
+    this.setState({ 
+      showCreateProduct: true,
+     })
+     console.log(this.state)
+  }
+
+  handleCloseAddInventoryClick = (e) => {
+    this.setState({
+      showCreateProduct: false,
+    })
+  }
+  
   render(){
+    const showCreateProduct = this.state.showCreateProduct
     return (
       <MuiThemeProvider>
         <ProductPageDiv>
@@ -44,7 +83,24 @@ export default class ProductPage extends Component {
           <Container
             textAlign="center"
             >
-            <CreateProduct/>
+            {showCreateProduct ? 
+              <div>
+                <CreateProduct />
+                <CloseAddInventoryButton
+                style={ styles.addCloseInventoryStyles}
+                onClick={this.handleCloseAddInventoryClick}
+                className="inventoryButton"
+                />
+              </div>
+              :
+              <div>
+                <AddInventoryButton
+                  onClick={this.handleAddInventoryClick}
+                  className="inventoryButton"
+                  style={ styles.addCloseInventoryStyles}
+                />
+              </div>
+            }
             <div className="productCssGridContainer">
               <Products />
             </div>

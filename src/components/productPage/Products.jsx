@@ -4,7 +4,7 @@ import gql from "graphql-tag";
 import Card, { CardMedia, CardTitle } from 'material-ui/Card'
 
 // import UpdateInventory from './UpdateInventory'
-
+// <UpdateInventory id={_id} title={title} qty={qty} imageURL={imageURL} productURL={productURL}/>
 
 import styled from 'styled-components'
 
