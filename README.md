@@ -46,7 +46,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] Update Inventory Item
 - [x] Delete Inventory Item
 
-##### Working      Deploy Back End [Back End Deployed Using .Now](https://gql-api-kdwnwzplsd.now.sh)
+## Working      Deploy Back End [Deployed Using .Now](https://gql-api-kdwnwzplsd.now.sh)
 
 ### **React/GraphQL Inventory Page (client):** 
 #### code: https://github.com/jwgravesfl/jwgid/tree/master/src/components/productPage
@@ -55,9 +55,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [ ] Inventory Items Page **In Progress**
 - [x] Create Inventory Item
 - [x] List Items
-- [ ] Update Inventory Item Qty **In Progress**
+- [x] Update Inventory Item Qty
 - [ ] Update Inventory Item Detail Information
 - [ ] Delete Inventory Item
+
+#### Working Deploy Front End [Deployed Using Surge](https://informationdesignus.surge.sh)
 
 ### **Step by Step React setup from scratch:** 
 ####   code: commits: https://github.com/jwgravesfl/ReactFromScratch/commits/master

@@ -3,8 +3,8 @@ import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import Card, { CardMedia, CardTitle } from 'material-ui/Card'
 
-// import UpdateInventory from './UpdateInventory'
-// <UpdateInventory id={_id} title={title} qty={qty} imageURL={imageURL} productURL={productURL}/>
+import UpdateInventory from './UpdateInventory'
+
 
 import styled from 'styled-components'
 
@@ -63,11 +63,11 @@ export default class Products extends Component {
                                     overlay={
                                     <div id="productOverlay">
                                     <CardTitle title="Name of Product" subtitle={title} />
-                                    
+                                    <UpdateInventory title={title} qty={qty} _id={_id} imageURL={imageURL} productURL={productURL} data={data}/>
                                     </div>
                                     }
                                     >
-                                        <img src={imageURL} alt="imageURL" />
+                                    <img src={imageURL} alt="imageURL" />
                                 </CardMedia>
                                     
                                 </Card>  
