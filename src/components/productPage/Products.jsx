@@ -4,6 +4,8 @@ import gql from "graphql-tag";
 import Card, { CardMedia, CardTitle } from 'material-ui/Card'
 
 import UpdateInventory from './UpdateInventory'
+import UpdateProfileInfo from './UpdateProfileInfo'
+
 
 
 import styled from 'styled-components'
@@ -17,6 +19,10 @@ const GridColumnMainDiv = styled.div `
    }
 
     .qtyTextField {
+    }
+
+    .productOverlay {
+        height: 100%;
     }
 
     .buttonGroup {
@@ -43,14 +49,18 @@ const getProducts = gql`
 `
 // <UpdateInventory qty={ qty }/>
 export default class Products extends Component {
+    
+    
 
   render() {
+      
     return (
    
         <Query
             query={getProducts}
             >
-            
+                
+
             {({ loading, error, data }) => {
                 if (loading) return <p>Loading...</p>;
                 if (error) return <p>Error :(</p>;
@@ -58,11 +68,16 @@ export default class Products extends Component {
                 return data.allProducts.map(({ title, qty, _id, imageURL, productURL }) => (
                         
                             <GridColumnMainDiv key={_id}>
-                                <Card>
+                                <Card style={{ height: '100%' }}>
+                               
+                                
+                               
                                 <CardMedia
+                                    overlayContainerStyle={{ height: '100%' }}
                                     overlay={
                                     <div id="productOverlay">
-                                    <CardTitle title="Name of Product" subtitle={title} />
+                                    <UpdateProfileInfo title={title} qty={qty} _id={_id} imageURL={imageURL} productURL={productURL} data={data}/>
+                                    <CardTitle title={title} />
                                     <UpdateInventory title={title} qty={qty} _id={_id} imageURL={imageURL} productURL={productURL} data={data}/>
                                     </div>
                                     }

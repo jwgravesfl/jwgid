@@ -36,9 +36,10 @@ const ProductPageDiv = styled.div`
     }
 
     .inventoryButton {
-      position: absolute;
-      top: 10%;
-      right: 10%;
+      position: fixed;
+      top: 5%;
+      right: 5%;
+      z-index: 9999;
      
     }
 
@@ -105,6 +106,7 @@ export default class ProductPage extends Component {
               <Products />
             </div>
           </Container>
+          
           </div>  
         </ProductPageDiv>
       </MuiThemeProvider>
