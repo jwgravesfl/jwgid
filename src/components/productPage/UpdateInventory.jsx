@@ -23,11 +23,11 @@ const UPDATE_PRODUCT = gql`
 
 
 export default class UpdateInventory extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
   
     this.state = {
-       qty: this.props.qty
+       qty: ""
     }
   }
   
@@ -38,6 +38,8 @@ export default class UpdateInventory extends Component {
         })
       console.log(this.state, this.props)
     }
+
+    
   render() {
     return (
       <div>
@@ -56,13 +58,13 @@ export default class UpdateInventory extends Component {
                       }}>
                       <div className="buttonGroup">
                           <TextField
-                              defaultValue={this.state.qty}
+                              defaultValue={this.props.qty}
                               name="qty"
                               onChange={this.handleChange}
                               style={{width: '4em', textAlign: 'right', marginRight: '1em', backgroundColor: ''}}
-                              inputStyle={{ textAlign: 'right' }}
+                              inputStyle={{ textAlign: 'right', color: 'white' }}
                               floatingLabelText="Inventory"
-                              floatingLabelStyle={{ color: 'black' }}
+                              floatingLabelStyle={{ color: 'white' }}
                               className="qtyTextField"
 
                               />

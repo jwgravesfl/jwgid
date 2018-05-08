@@ -33,9 +33,9 @@ export default class UpdateProductInfo extends Component {
     super(props)
   
     this.state = {
-       title: this.props.title, 
-       imageURL: this.props.imageURL,
-       productURL: this.props.productURL
+       title: "", 
+       imageURL: "",
+       productURL: ""
     }
   }
   
@@ -68,24 +68,26 @@ export default class UpdateProductInfo extends Component {
                         }}>
                       <div className="buttonGroup">
                       <TextField
-                          value={this.state.title}
-                          defaultValue={this.state.title}
+                          defaultValue={this.props.title}
                           onChange={this.handleChange}
                           name="title"
                           floatingLabelText="Name of Product"
+                          inputStyle={{ color: 'black' }}
                           floatingLabelStyle={{ color: 'black' }}
                           />
                         <TextField
-                          value={this.state.imageURL}
+                          defaultValue={this.props.imageURL}
                           onChange={this.handleChange}
                           name="imageURL"
+                          inputStyle={{ color: 'black' }}
                           floatingLabelText="Image of Product"
                           floatingLabelStyle={{ color: 'black' }}
                         />
                         <TextField
-                          value={this.state.productURL}
+                          defaultValue={this.props.productURL}
                           onChange={this.handleChange}
                           name="productURL"
+                          inputStyle={{ color: 'black' }}
                           floatingLabelText="Product Detail"
                           floatingLabelStyle={{ color: 'black' }}
                           className="qtyTextField"

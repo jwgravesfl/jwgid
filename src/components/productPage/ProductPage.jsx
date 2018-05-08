@@ -11,6 +11,9 @@ import CloseAddInventoryButton from 'material-ui/svg-icons/navigation/close'
  
 
 const ProductPageDiv = styled.div`
+
+margin-top: 5vh;
+    
     .productPageContainer {
         background-color: 
 

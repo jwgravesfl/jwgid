@@ -56,8 +56,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] Create Inventory Item
 - [x] List Items
 - [x] Update Inventory Item Qty
-- [ ] Update Inventory Item Detail Information
+- [x] Update Inventory Item Detail Information
 - [ ] Delete Inventory Item
+- [ ] Add CSS and design.
+
+#### Functionality to Add
+- [ ] Image Import
 
 #### Working Deploy Front End [Deployed Using Surge](https://informationdesignus.surge.sh)
 

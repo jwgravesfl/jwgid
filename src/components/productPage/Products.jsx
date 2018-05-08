@@ -26,7 +26,6 @@ const GridColumnMainDiv = styled.div `
     }
 
     .buttonGroup {
-      text-align: right;
       background-color: ;  
     }
     
@@ -47,7 +46,7 @@ const getProducts = gql`
     }
 }
 `
-// <UpdateInventory qty={ qty }/>
+
 export default class Products extends Component {
     
     
@@ -76,8 +75,12 @@ export default class Products extends Component {
                                     overlayContainerStyle={{ height: '100%' }}
                                     overlay={
                                     <div id="productOverlay">
+                                    <CardTitle 
+                                        titleColor="white"
+                                        titleStyle={{  }}
+                                        title={title}
+                                        />
                                     <UpdateProfileInfo title={title} qty={qty} _id={_id} imageURL={imageURL} productURL={productURL} data={data}/>
-                                    <CardTitle title={title} />
                                     <UpdateInventory title={title} qty={qty} _id={_id} imageURL={imageURL} productURL={productURL} data={data}/>
                                     </div>
                                     }
