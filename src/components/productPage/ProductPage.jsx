@@ -39,11 +39,9 @@ margin-top: 5vh;
     }
 
     .inventoryButton {
-      position: fixed;
-      top: 5%;
-      right: 5%;
-      z-index: 9999;
-     
+           position: fixed;
+           top: 5%;
+           right: 5%;
     }
 
 `
@@ -63,8 +61,9 @@ export default class ProductPage extends Component {
       showCreateProduct: false,  
     }
     this.handleAddInventoryClick = this.handleAddInventoryClick.bind(this)
-  }
-
+    }  
+ 
+    
   handleAddInventoryClick = (e) => {
     this.setState({ 
       showCreateProduct: true,

@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import gql from "graphql-tag";
-import TextField from 'material-ui/TextField'
+
 import { graphql } from 'react-apollo';
 
 import styled from 'styled-components'
 import Subheader from 'material-ui/Subheader'
+import TextField from 'material-ui/TextField'
 
 const CreateProductDiv = styled.div`
 
-      margin-bottom: 10em;
 
     .createProductContainer {
         background-color: yellow;
@@ -48,7 +48,6 @@ const styles = {
   },
   floatingLabelTextJSS: {
   fontFamily: 'Rock Salt, cursive',
-  marginLeft: '10vw',
   textAlign: 'left'
   },
   subheaderText: {

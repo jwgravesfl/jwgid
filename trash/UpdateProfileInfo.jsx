@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import RaisedButton from 'material-ui/RaisedButton'
-import {Mutation} from 'react-apollo'
+
 import TextField from 'material-ui/TextField'
+import {Mutation} from 'react-apollo'
 import gql from "graphql-tag"
 
 import styled from 'styled-components'
@@ -40,10 +41,18 @@ export default class UpdateProfileInfo extends Component {
         super(props)
       
         this.state = {
-          title: this.props.title,
-          imageURL: this.props.imageURL,
-          productURL: this.props.productURL,
+          title: "",
+          imageURL: "",
+          productURL: "",
         }
+    }
+
+    componentWillMount() {
+        this.setState({
+            title: this.props.title,
+            imageURL: this.props.imageURL,
+            productURL: this.props.productURL
+        })
     }
   
       handleChange = (event) => {

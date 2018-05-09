@@ -36,19 +36,17 @@ export default class UpdateInventory extends Component {
     this.setState({
             [event.target.name]: event.target.value,
         })
-      console.log(this.state, this.props)
     }
 
     
   render() {
     return (
       <div>
-        {console.log(this.props)}
         
                     
 
          
-                <Mutation mutation={UPDATE_PRODUCT} key={this.props._id}>
+         <Mutation mutation={UPDATE_PRODUCT} key={this.props._id}>
                   {(updateProduct, { loading, error }) => (
                     
                     <form onSubmit={e => {

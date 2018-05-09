@@ -3,9 +3,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const SignUpSheetStickyNoteMainDiv = styled.div`
-    position: fixed;
-    top: 60vmax;
-    left: 5vmax;
+    
 
 
     h2,p{

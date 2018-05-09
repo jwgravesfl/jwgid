@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
-import Card, { CardMedia, CardTitle } from 'material-ui/Card'
+import Card, { CardMedia } from 'material-ui/Card'
+import img from '../../assets/inventoryImages/blackGuitar.jpg'
 
-import UpdateInventory from './UpdateInventory'
-import UpdateProfileInfo from './UpdateProfileInfo'
+import EditProduct from './EditProduct'
 
 
 
@@ -16,22 +16,22 @@ const GridColumnMainDiv = styled.div `
     width: 100%;
     height: 100%;
 
+   #productImage {
+       height: 100%;
+       width: 100%;
+       position: absolute;
+       top: 0;
+       left: 0;
    }
 
-    .qtyTextField {
-    }
+   .mediaContainer{
+       height: 100%;
+       width: 100%;
+   }
 
-    .productOverlay {
-        height: 100%;
-    }
-
-    .buttonGroup {
-      background-color: ;  
-    }
-    
-    .raisedButton {
-        
-    }
+   .editProduct{
+       background-color: black;
+   }
 `
 
 
@@ -67,27 +67,20 @@ export default class Products extends Component {
                 return data.allProducts.map(({ title, qty, _id, imageURL, productURL }) => (
                         
                             <GridColumnMainDiv key={_id}>
-                                <Card style={{ height: '100%' }}>
-                               
-                                
-                               
-                                <CardMedia
-                                    overlayContainerStyle={{ height: '100%' }}
-                                    overlay={
-                                    <div id="productOverlay">
-                                    <CardTitle 
-                                        titleColor="white"
-                                        titleStyle={{  }}
-                                        title={title}
-                                        />
-                                    <UpdateProfileInfo title={title} qty={qty} _id={_id} imageURL={imageURL} productURL={productURL} data={data}/>
-                                    <UpdateInventory title={title} qty={qty} _id={_id} imageURL={imageURL} productURL={productURL} data={data}/>
-                                    </div>
-                                    }
-                                    >
-                                    <img src={imageURL} alt="imageURL" />
+                                <Card className="cardContainer">
+                               <CardMedia className="mediaContainer">
+                                   
+                               <img src={imageURL} alt="imageURL" id="productImage" />
+                               <EditProduct
+                                    className="editProduct"
+                                    title={title}
+                                    qty={qty}
+                                    _id={_id}
+                                    imageURL={imageURL}
+                                    productURL={productURL}
+                                    data={data}
+                                />
                                 </CardMedia>
-                                    
                                 </Card>  
                             </GridColumnMainDiv>
                 ));
