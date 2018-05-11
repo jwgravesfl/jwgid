@@ -81,7 +81,7 @@ export default class ProductPage extends Component {
     const showCreateProduct = this.state.showCreateProduct
     return (
       <MuiThemeProvider>
-        <ProductPageDiv>
+        <ProductPageDiv>   
           <div className="productPageContainer">
           <Container
             textAlign="center"
