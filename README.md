@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 # ForHire
-  Full Stack Front End Emphasis ReactJS ecosystem developer.  Ideally I would like to play with React all day.  I have spent the last year plus treating React and friensd as a video game.  Doinig my best to consistently level up.  I have enjoyed almost every tutorial on the innernet.  From Lynda.com and Dan Abramov to them boys on youtube, Brad, Jesse and Keith, if you know of a great tutorial or concept, I will watch it.  I also love a good article or docs.  
+  Full Stack Front End Emphasis ReactJS ecosystem developer.  Ideally I would like to play with React all day.  I have spent the couple of years treating React and friends as a video game doing my best to consistently level up.  I have enjoyed almost every tutorial on the internet.  From Lynda.com and Dan Abramov to them boys on youtube, Brad, Jesse and Keith, if you know of a great tutorial or concept, I will watch it.  I also love a good article or docs.  
 
 # J. Graves
 ### jwgravesfl@gmail.com
