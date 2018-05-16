@@ -59,32 +59,23 @@ const styles = {
 
 
 class CreateProduct extends Component {
-    constructor() {
-      super();
-      this.state = {
+    state = {
         title: '',
         qty: '',
         imageURL: '',
         productURL: '',
         clicked: false,
       }
-      this.handleChange = this.handleChange.bind(this);
-      this.handleKeyPress = this.handleKeyPress.bind(this);
-    }  
+        
  
     handleChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value,
         })
-      console.log(this.state, this.props)
     }
 
-    handleKeyPress = (event) => {
-        if (event.key === 'Enter') {
-          this.props.createProduct(this.state.title, this.state.qty, this.state.imageURL, this.state.productURL);
-          event.preventDefault()
-          this.setState({ title: '', qty: '', imageURL: '', productURL: '' });
-        }
+    handleKeyPressSubmit = () => {
+      this.props.handleKeyPress(this.state)
       }    
 
   render(){
@@ -98,8 +89,8 @@ class CreateProduct extends Component {
       </Subheader>
         <TextField
             value={this.state.title}
-            onChange={this.handleChange}
-            onKeyPress={this.handleKeyPress}
+            onChange={props.handleChange}
+            onKeyPress={this.handleKeyPressSubmit}
             fullWidth={true}
             name="title"
             style={styles.input}
@@ -110,7 +101,7 @@ class CreateProduct extends Component {
         <TextField
           value={this.state.qty}
           onChange={this.handleChange}
-          onKeyPress={this.handleKeyPress}
+          onKeyPress={this.handleKeyPressSubmit}
           fullWidth={true}
           name="qty"
           style={styles.input}
@@ -121,7 +112,7 @@ class CreateProduct extends Component {
         <TextField
           value={this.state.imageURL}
           onChange={this.handleChange}
-          onKeyPress={this.handleKeyPress}
+          onKeyPress={this.handleKeyPressSubmit}
           fullWidth={true}
           name="imageURL"
           style={styles.input}
@@ -132,7 +123,7 @@ class CreateProduct extends Component {
         <TextField
           value={this.state.productURL}
           onChange={this.handleChange}
-          onKeyPress={this.handleKeyPress}
+          onKeyPress={this.handleKeyPressSubmit}
           fullWidth={true}
           name="productURL"
           style={styles.input}

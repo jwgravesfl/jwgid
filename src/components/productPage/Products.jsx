@@ -49,7 +49,10 @@ const getProducts = gql`
 
 export default class Products extends Component {
     
-    
+    componentDidUpdate(prevProps, prevState) {
+        if ([this.state.allProducts] !== [prevState.allProducts])
+        this.getProducts()
+      }
 
   render() {
       

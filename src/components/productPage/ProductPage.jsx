@@ -63,6 +63,20 @@ export default class ProductPage extends Component {
     this.handleAddInventoryClick = this.handleAddInventoryClick.bind(this)
     }  
  
+    handleChange = (event) => {
+      this.setState({
+          [event.target.name]: event.target.value,
+      })
+    console.log(1)
+  }
+
+  handleKeyPress = (event) => {
+      if (event.key === 'Enter') {
+        this.props.createProduct(this.state.title, this.state.qty, this.state.imageURL, this.state.productURL);
+        event.preventDefault()
+        this.setState({ title: '', qty: '', imageURL: '', productURL: '' });
+      }
+    }
     
   handleAddInventoryClick = (e) => {
     this.setState({ 
@@ -88,7 +102,7 @@ export default class ProductPage extends Component {
             >
             {showCreateProduct ? 
               <div>
-                <CreateProduct />
+                <CreateProduct handleChange={() => this.handleChange()} />
                 <CloseAddInventoryButton
                 style={ styles.addCloseInventoryStyles}
                 onClick={this.handleCloseAddInventoryClick}

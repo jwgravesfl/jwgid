@@ -51,16 +51,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### **React/GraphQL Inventory Page (client):** 
 #### code: https://github.com/jwgravesfl/jwgid/tree/master/src/components/productPage
 
-#### Front End Items needed for Inventory System  **In Progress**
-- [ ] Inventory Items Page **In Progress**
+#### Front End Items needed for Inventory System  **Completed**
+- [x] Inventory Items Page 
 - [x] Create Inventory Item
 - [x] List Items
 - [x] Update Inventory Item Qty
 - [x] Update Inventory Item Detail Information
-- [ ] Delete Inventory Item
-- [ ] Add CSS and design.
+- [x] Delete Inventory Item
+  
 
 #### Functionality to Add
+- [ ] Add CSS and design.
 - [ ] Image Import
 
 #### Working Deploy Front End [Deployed Using Surge](https://informationdesignus.surge.sh)
