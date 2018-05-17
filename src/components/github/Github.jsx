@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Container } from 'semantic-ui-react'
 
 const GithubMainDiv = styled.div`
-    min-height: 100vh;
+    
     text-align: center;
     width: 100%;
     

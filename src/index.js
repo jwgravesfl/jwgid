@@ -16,6 +16,7 @@ const client = new ApolloClient({
 })
 
 const IndexDiv = styled.div`
+    flex: 1;
     .indexDivContainer {
       background-image: url(${bgImg});
       background-repeat: no-repeat;

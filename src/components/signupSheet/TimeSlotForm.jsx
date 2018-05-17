@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Form, Button, Responsive } from 'semantic-ui-react'
-import SignUpSheetStickyNote from '../stickyNote/SignUpSheetStickyNote'
 
 import styled from 'styled-components'
 
@@ -126,7 +125,6 @@ export default class TimeSlotForm extends Component {
             </span>
           )}        
       </span>
-      <SignUpSheetStickyNote />
       </TimeSlotFormMainDiv>
     )
   }
