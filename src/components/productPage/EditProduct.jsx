@@ -5,7 +5,6 @@ import TextField from 'material-ui/TextField'
 import styled from 'styled-components'
 import {Mutation} from 'react-apollo'
 import gql from "graphql-tag"
-import SaveButton from 'material-ui/svg-icons/content/save'
 
 import RaisedButton from 'material-ui/RaisedButton'
 

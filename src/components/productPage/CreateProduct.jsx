@@ -66,7 +66,6 @@ class CreateProduct extends Component {
         qty: '',
         imageURL: '',
         productURL: '',
-        clicked: false,
       }
       this.handleChange = this.handleChange.bind(this);
       this.handleKeyPress = this.handleKeyPress.bind(this);
@@ -83,11 +82,15 @@ class CreateProduct extends Component {
         if (event.key === 'Enter') {
           this.props.createProduct(this.state.title, this.state.qty, this.state.imageURL, this.state.productURL);
           event.preventDefault()
-          this.setState({ title: '', qty: '', imageURL: '', productURL: '' });
+          this.setState({ title: '', qty: '', imageURL: '', productURL: ''});
+          window.location.reload()
         }
       }    
 
   render(){
+    
+   
+
     return (
     <CreateProductDiv>
       <div className="createProductContainer">
@@ -140,8 +143,9 @@ class CreateProduct extends Component {
           floatingLabelText="Product Detail"
           floatingLabelStyle={styles.floatingLabelTextJSS}
         />
-        </div>  
+        </div>
       </CreateProductDiv>
+      
     )
   }
 }

@@ -90,6 +90,8 @@ export default class ProductPage extends Component {
       showCreateProduct: false,
     })
   }
+
+
   
   render(){
     const showCreateProduct = this.state.showCreateProduct
@@ -102,7 +104,7 @@ export default class ProductPage extends Component {
             >
             {showCreateProduct ? 
               <div>
-                <CreateProduct handleChange={() => this.handleChange()} />
+                <CreateProduct handleKeyPress={this.handleKeyPress} />
                 <CloseAddInventoryButton
                 style={ styles.addCloseInventoryStyles}
                 onClick={this.handleCloseAddInventoryClick}
