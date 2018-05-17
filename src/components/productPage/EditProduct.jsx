@@ -7,6 +7,7 @@ import {Mutation} from 'react-apollo'
 import gql from "graphql-tag"
 
 import RaisedButton from 'material-ui/RaisedButton'
+import DeleteProduct from './DeleteProduct'
 
 const UPDATE_PRODUCT = gql`
   mutation UpdateProduct($_id: ID!, $title: String!, $qty: Int!, $imageURL: String!, $productURL: String!){
@@ -131,6 +132,7 @@ this.setState({
               zDepth={5}
               rounded={true}
               >
+              <DeleteProduct _id={this.props._id} />
               {showSaveProduct ? 
               <div>
                 <RaisedButton
