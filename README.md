@@ -1,20 +1,26 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 # ForHire
-  Full Stack Front End Emphasis ReactJS ecosystem developer.  Ideally I would like to play with React all day.  I have spent the couple of years treating React and friends as a video game doing my best to consistently level up.  I have enjoyed almost every tutorial on the internet.  From Lynda.com and Dan Abramov to them boys on youtube, Brad, Jesse and Keith, if you know of a great tutorial or concept, I will watch it.  I also love a good article or docs.  
+  Full Stack Front End Emphasis ReactJS ecosystem developer.
 
 # J. Graves
 ### jwgravesfl@gmail.com
 
 ## SOCIAL MEDIA
-[LINKEDIN:](https://www.linkedin.com/in/jwgravesfl/)
+[LINKEDIN](https://www.linkedin.com/in/jwgravesfl/)
 
 ## OBJECTIVE
-##### My objective for the future is to continue capitalizing on my experience empathizing and connecting with clients, colleagues and co-workers, to continue fostering my unrelenting desire to learn in a current and in a relevant way and to continue utilizing a client and learner centered approach to provide best is world service and deliverables to all in which I interact.
+My objective for the future is to continue capitalizing on my experience empathizing and connecting with clients, colleagues and co-workers, to continue fostering my unrelenting desire to learn in a current and in a relevant way and to continue utilizing a client and learner centered approach to provide best is world service and deliverables to all in which I interact.
 
 ## EDUCATION
 ### [UNIVERSITY OF SOUTH FLORIDA](http://www.usf.edu/)
 #### BSAS Information Studies – Information Architecture - 3.71GPA
+| Web Development Classes | Web Design Classes | Electives |
+| --------------- | ------------------------ | -------- |
+|   JavaScript    | Information Architecture | Leading in the Workplace |
+|     JQuery      |    Interaction Design    | History of Education |
+| Intro to Java | IT Web Design | Schools and Society |
+| Web Page Management | Web Design Technologies | Audio Recording Basics |
 
 ## Portfolio Page for **J. Wayne Graves**
 ### [J. Graves React Ecosystem Portfolio](https://github.com/jwgravesfl/jwgid) 
