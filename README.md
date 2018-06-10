@@ -16,6 +16,7 @@ My objective for the future is to continue capitalizing on my experience empathi
 ### [UNIVERSITY OF SOUTH FLORIDA](http://www.usf.edu/)
 #### BSAS Information Studies – Information Architecture - 3.71GPA
 - Graduate with Honors May 2017
+
 | Web Development Classes | Web Design Classes | Electives |
 | --------------- | ------------------------ | -------- |
 |   JavaScript    | Information Architecture | Leading in the Workplace |
@@ -23,13 +24,29 @@ My objective for the future is to continue capitalizing on my experience empathi
 | Intro to Java | IT Web Design | Schools and Society |
 | Web Page Management | Web Design Technologies | Audio Recording Basics |
 
-*I also have degrees in Business Administration and Management and Accounting
+   - I also have degrees in *Business Administration and Management* and *Accounting*
 
-## Portfolio Page for **J. Wayne Graves**[J. Graves React Ecosystem Portfolio](https://github.com/jwgravesfl/jwgid) 
-# Full Stack Frontend Focus ReactJS Ecosystem Information Developer 
-* **See [Demo](https://informationdesignus.surge.sh/)**
+# Portfolio Page for **[J. Graves](https://github.com/jwgravesfl/jwgid)**
+## Full Stack Frontend Focus ReactJS Ecosystem Information Developer 
+### **See [Demo](https://informationdesignus.surge.sh/)**
 
-# J. Graves example Portfolio Projects:
+# Example Projects
+## [CowboyDr.com](https://cowboydr.surge.sh) *development site*  
+1. All Access static Landing page for Entertainment based marketing site 
+     1. Loosely based on traditional Press Kit
+     2. Includes a Redux Form, booking information and api media
+     3. Includes links to relevant social media
+2. Redux user only area - **Join the Party Wagon** 
+     1. Sign In/Sign Up
+        - https://cowboydr.surge.sh/signin
+        - [SignIn Code on Github](https://github.com/jwgravesfl/cowboydr.com/blob/master/src/routes/SignIn.jsx)
+        - [SignUp Code on Github](https://github.com/jwgravesfl/cowboydr.com/blob/master/src/routes/SignUp.jsx)   
+     3. Forgot Password
+     4. Reset Password
+     5. Individual Account/Profile Page
+     6. Currently only available on the desktop site
+
+   - Live Site is @ https://cowboydr.com 
 
 ## **Main Project** Inventory System 
 ### [Inventory Page](https://informationdesignus.surge.sh/productpage)
