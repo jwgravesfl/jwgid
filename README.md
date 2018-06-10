@@ -15,6 +15,7 @@ My objective for the future is to continue capitalizing on my experience empathi
 ## EDUCATION
 ### [UNIVERSITY OF SOUTH FLORIDA](http://www.usf.edu/)
 #### BSAS Information Studies – Information Architecture - 3.71GPA
+- Graduate with Honors May 2017
 | Web Development Classes | Web Design Classes | Electives |
 | --------------- | ------------------------ | -------- |
 |   JavaScript    | Information Architecture | Leading in the Workplace |
@@ -22,12 +23,11 @@ My objective for the future is to continue capitalizing on my experience empathi
 | Intro to Java | IT Web Design | Schools and Society |
 | Web Page Management | Web Design Technologies | Audio Recording Basics |
 
-## Portfolio Page for **J. Wayne Graves**
-### [J. Graves React Ecosystem Portfolio](https://github.com/jwgravesfl/jwgid) 
-#### React Ecosystem Full Stack Progressive Web App React, Node, GraphQL, Express, MongoDB
+*I also have degrees in Business Administration and Management and Accounting
 
-# See [Demo](https://informationdesignus.surge.sh/)
-
+## Portfolio Page for **J. Wayne Graves**[J. Graves React Ecosystem Portfolio](https://github.com/jwgravesfl/jwgid) 
+# Full Stack Frontend Focus ReactJS Ecosystem Information Developer 
+* **See [Demo](https://informationdesignus.surge.sh/)**
 
 # J. Graves example Portfolio Projects:
 
