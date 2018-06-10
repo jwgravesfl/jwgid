@@ -19,9 +19,9 @@ My objective for the future is to continue capitalizing on my experience empathi
 
 | Web Development Classes | Web Design Classes | Electives |
 | --------------- | ------------------------ | -------- |
-|   JavaScript    | Information Architecture | Leading in the Workplace |
-|     JQuery      |    Interaction Design    | History of Education |
-| Intro to Java | IT Web Design | Schools and Society |
+| JavaScript | Information Architecture | Leading in the Workplace |
+| JQuery | Interaction Design | History of Education |
+| Intro to Java | Responsive Web Design | Schools and Society |
 | Web Page Management | Web Design Technologies | Audio Recording Basics |
 
    - I also have degrees in *Business Administration and Management* and *Accounting*
@@ -30,79 +30,111 @@ My objective for the future is to continue capitalizing on my experience empathi
 ## Full Stack Frontend Focus ReactJS Ecosystem Information Developer 
 ### **See [Demo](https://informationdesignus.surge.sh/)**
 
+# **[React Awesome Learn List](https://github.com/jwgravesfl/rall)**
+> A list of what I consider to be the main programming, javascript and ReactJS concepts that are important to understand in the ReactJS declarative programming paradigm
+
 # Example Projects
 ## [CowboyDr.com](https://cowboydr.surge.sh) *development site*  
-1. All Access static Landing page for Entertainment based marketing site 
+1. All Access Responsive static Landing page for Entertainment based marketing site 
      1. Loosely based on traditional Press Kit
      2. Includes a Redux Form, booking information and api media
      3. Includes links to relevant social media
+      1. Animate.css
+      2. Animate on Scroll
+      3. Styled Components
+      4. CSS Grid
+      5. React Router
 2. Redux user only area - **Join the Party Wagon** 
      1. Sign In/Sign Up
         - https://cowboydr.surge.sh/signin
-        - [SignIn Code on Github](https://github.com/jwgravesfl/cowboydr.com/blob/master/src/routes/SignIn.jsx)
-        - [SignUp Code on Github](https://github.com/jwgravesfl/cowboydr.com/blob/master/src/routes/SignUp.jsx)   
-     3. Forgot Password
-     4. Reset Password
-     5. Individual Account/Profile Page
-     6. Currently only available on the desktop site
+        - [SignIn Component on Github](https://github.com/jwgravesfl/cowboydr.com/blob/master/src/routes/SignIn.jsx)
+        - https://cowboydr.surge.sh/signup
+        - [SignUp Component on Github](https://github.com/jwgravesfl/cowboydr.com/blob/master/src/routes/SignUp.jsx)
+     2. Individual Account/Profile Page
+        - https://cowboydr.surge.sh/account - sample login info - **Email:** jwgravesfl@gmail.com **Password:** password
+        - [Account/Profile Component on Github](https://github.com/jwgravesfl/cowboydr.com/blob/master/src/routes/Account.jsx)
+     3. Reset Password and Password Change
+        - https://cowboydr.surge.sh/passwordforget
+        - [Forgot Reset Component on Github](https://github.com/jwgravesfl/cowboydr.com/blob/master/src/routes/PasswordForget.jsx)
+     4. Forgot Password
+        - https://cowboydr.surge.sh/passwordforget
+        - [Forgot Password Component on Github](https://github.com/jwgravesfl/cowboydr.com/blob/master/src/routes/PasswordForget.jsx)
+     5. Persistent Users List
+        - https://cowboydr.surge.sh/userspage
+        - [Forgot Password Component on Github](https://github.com/jwgravesfl/cowboydr.com/blob/master/src/routes/PasswordForget.jsx)
+          1. Recompose
+          2. Redux Form
+          3. Redux Thunk
+          4. Redux Dev Tools Extension
 
-   - Live Site is @ https://cowboydr.com 
+**** Live Site is @ https://cowboydr.com
 
-## **Main Project** Inventory System 
-### [Inventory Page](https://informationdesignus.surge.sh/productpage)
-#### code: https://github.com/jwgravesfl/jwgid/tree/master/src/components/productPage
-  ##### In Construction Band Inventory Management System.
+## [Inventory Page](https://informationdesignus.surge.sh/productpage)
+code: https://github.com/jwgravesfl/jwgid/tree/master/src/components/productPage
 
-### **GraphQL Server for Main Project:** [Products Graphiql](https://gql-api-kdwnwzplsd.now.sh/graphql)
-#### code: https://github.com/jwgravesfl/GraphQLProductAPI 
+### **GraphQL Backend Server** 
+   - [Inventory Items Graphiql](https://gql-api-kdwnwzplsd.now.sh/graphql)
+   - [Inventory Item API Code on Github ](https://github.com/jwgravesfl/GraphQLProductAPI)  
+1. Node.js
+   - [Node.js, Express and GraphQL Server](https://gql-api-kdwnwzplsd.now.sh/)
+   - [Server index.js on Github ](https://github.com/jwgravesfl/GraphQLProductAPI/blob/master/index.js)
+2. MongoDB
+   - [MongoDB Models](https://gql-api-kdwnwzplsd.now.sh/graphql)
+   - [Inventory Database Models on Github ](https://github.com/jwgravesfl/GraphQLProductAPI/tree/master/models)
+3. GraphQL
+   - [Inventory Grahpiql with CRUD API](https://gql-api-kdwnwzplsd.now.sh/graphql)
+   - [Graphql Resolvers on Github ](https://github.com/jwgravesfl/GraphQLProductAPI/blob/master/resolvers.js)
+   - [Graphql Schema on Github ](https://github.com/jwgravesfl/GraphQLProductAPI/blob/master/schema.js)
+
+      1. Node.js/Express Server server.js
+      2. GraphQL Back End
+      3. Schema.js
+      4. Resolvers.js
+      5. Create Inventory Item
+      6. AllProducts Query
+      7. GetProduct Query
+      8. Update Inventory Item
+      9. Delete Inventory Item
+
+### **React/GraphQL Frontend Inventory Page** 
+1. Front End Items needed for Inventory System
+   - [Graphql CRUD Inventory Manager](http://informationdesignus.surge.sh/productpage)
+   - [Inventory Frontend Components on Github](https://github.com/jwgravesfl/jwgid/tree/master/src/components/productPage)
+      1. Inventory Items Page
+      2. Create Inventory Item
+      3. List Items
+      4. Update Inventory Item Qty
+      5. Update Inventory Item Detail Information
+      6. Delete Inventory Item
+2. Needed
+  1. Information Design
+  2. CSS
+  3. Image Import
+
+## Step by Step React setup from scratch
+   - [Commits on Github ](https://github.com/jwgravesfl/ReactFromScratch/commits/master)
+1. webpack
+2. babel
+3. git & github
+
+## Picture Gallery of Royalty Free Images
+   - [Standard API Calls to Pixabay API](https://informationdesignus.surge.sh/picturegallery)
+   - [Inventory Database Models on Github ](https://github.com/jwgravesfl/jwgid/tree/master/src/components/pictureGallery)
+1. Proptypes
+2. Axios
+3. Material-ui
+
+## Github Organization Repository Issue GraphQL Query
+   - [Github Org Repo Issue Graphql newtwork request](https://informationdesignus.surge.sh/github)
+   - [Github Component on Github ](https://github.com/jwgravesfl/jwgid/blob/master/src/components/github/Github.jsx)
+1. Environmental Variables for GITHUB API Key
+2. Axios
+3. Promises
+
+## Open Mike Sign Up Sheet
+   - [Open Mike Sign Up Sheet - Front End Only](https://informationdesignus.surge.sh/timeslot)
+   - [Github Component on Github ](https://github.com/jwgravesfl/jwgid/blob/master/src/components/github/Github.jsx)
 
 
-### **Node.js/Express/MongoDB/GraphQL Inventory API (server):**
-#### Back End Items needed for Inventory System  **Complete**
-- [x] Node.js/Express Server server.js
-- [x] GraphQL Back End
-- [x] Schema.js  
-- [x] Resolvers.js
-- [x] Create Inventory Item
-- [x] AllProducts Query
-- [x] GetProduct Query
-- [x] Update Inventory Item
-- [x] Delete Inventory Item
-
-## Working      Deploy Back End [Deployed Using .Now](https://gql-api-kdwnwzplsd.now.sh)
-
-### **React/GraphQL Inventory Page (client):** 
-#### code: https://github.com/jwgravesfl/jwgid/tree/master/src/components/productPage
-
-#### Front End Items needed for Inventory System  **Completed**
-- [x] Inventory Items Page 
-- [x] Create Inventory Item
-- [x] List Items
-- [x] Update Inventory Item Qty
-- [x] Update Inventory Item Detail Information
-- [x] Delete Inventory Item
-  
-
-#### Functionality to Add
-- [ ] Add CSS and design.
-- [ ] Image Import
-
-#### Working Deploy Front End [Deployed Using Surge](https://informationdesignus.surge.sh)
-
-### **Step by Step React setup from scratch:** 
-####   code: commits: https://github.com/jwgravesfl/ReactFromScratch/commits/master
-- Step by Step Commits to github showing the steps to creating a React app from scratch.
-
-### **Picture Gallery of Royalty Free Images:** https://informationdesignus.surge.sh/picturegallery
-####   code: https://github.com/jwgravesfl/jwgid/tree/master/src/components/pictureGallery
-- Standard API call to Pixabay.    
-- Proptypes, Axios, Material-UI
-
-### **Github Organization Repository Issue GraphQL Query:** https://informationdesignus.surge.sh/github
-####  code: https://github.com/jwgravesfl/jwgid/blob/master/src/components/github/Github.jsx
-- Front End Github API call displaying open issues.  
-- Axios, GraphQL
-
-### **Open Mike Sign Up Sheet:**  https://informationdesignus.surge.sh/timeslot
 ####   code: https://github.com/jwgravesfl/jwgid/tree/master/src/components/signupSheet
 - Front End only showing state management and conditionals.
