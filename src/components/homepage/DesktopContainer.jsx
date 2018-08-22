@@ -49,7 +49,6 @@ export class DesktopContainer extends Component {
                 <Menu.Item><Link to="/timeslot">Sign Up Sheet</Link></Menu.Item>
                 <Menu.Item><Link to="/picturegallery">Photo Gallery</Link></Menu.Item>
                 <Menu.Item><a href="https://informationdesignus.surge.sh/github">Github API Search - GraphQL</a></Menu.Item>
-                <Menu.Item><a href="https://github.com/jwgravesfl/jwgid/blob/master/server/">MERN GraphQL Server and Product API SetUp</a></Menu.Item>
                 
 
                 <ImgSpan>

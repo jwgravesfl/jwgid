@@ -30,8 +30,7 @@ export default class Footer extends Component {
                     <List.Item><Link to="/timeslot">Sign Up Sheet</Link></List.Item>
                     <List.Item><Link to="/picturegallery">Photo Gallery</Link></List.Item>
                     <List.Item><a href="https://heatherlove.surge.sh">Heather Love Music</a></List.Item>
-                    <List.Item><a href="https://github.com/jwgravesfl/jwgid/blob/master/server/">MERN GraphQL Server SetUp</a></List.Item>
-                  </List>
+                    </List>
                 </Grid.Column>
                 <Grid.Column width={5}>
                   <Header inverted as='h4' content='Examples' />

@@ -10,7 +10,7 @@ import CloseAddInventoryButton from 'material-ui/svg-icons/navigation/close'
  
 
 const ProductPageDiv = styled.div`
-
+margin-top: 2em;
     padding: 1em;
     
     .productPageContainer { 
@@ -18,7 +18,9 @@ const ProductPageDiv = styled.div`
         
     }
 
-    .productCssGridContainer {
+    .productGrid {
+      margin: 1em;
+    }
      
 
     .inventoryButton {
@@ -101,7 +103,7 @@ export default class ProductPage extends Component {
                 />
               </div>
             }
-             <Products />
+             <Products className="productGrid"/>
           
           </div>  
         </ProductPageDiv>

@@ -7,6 +7,8 @@ import { Row, Col, Card, Button, CardTitle, CardText } from 'reactstrap'
 import styled from 'styled-components'
 import EditProduct from './EditProduct'
 
+
+
 const getProducts = gql`
 {
     allProducts {
@@ -43,7 +45,7 @@ export default class Products extends Component {
                     
                 return data.allProducts.map(({ title, qty, _id, imageURL, productURL }) => (
                     <Col xs="12" sm="6" md="6" lg="4" xl="4">
-                    <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                    <Card body inverse style={{ textAlign: "center", margin: "1em", backgroundColor: '#333', borderColor: '#333' }}>
                     <CardTitle>{title}</CardTitle>
                     <CardText>{qty}</CardText>
                     <CardText>{productURL}</CardText>
