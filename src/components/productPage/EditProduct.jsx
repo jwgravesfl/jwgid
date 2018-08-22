@@ -88,18 +88,25 @@ export default class EditProduct extends Component {
       imageURL: '',
       productURL: '',
       showSaveProduct: false,
+      showEditProduct: true,
     }
     this.handleChange = this.handleChange.bind(this);
-    this.handleEditClick = this.handleEditClick.bind(this)
+    this.handleEditInventoryClick = this.handleEditInventoryClick.bind(this)
 }  
 
-
-handleEditClick = (event) => {
-this.setState({ 
-  showSaveProduct: true
- })
- console.log(this.state)
+handleEditInventoryClick = (e) => {
+  this.setState({ 
+    showEditProduct: true,
+   })
+   console.log(this.state)
 }
+
+handleCloseEditInventoryClick = (e) => {
+  this.setState({
+    showEditProduct: false,
+  })
+}
+
 
   handleChange = (event) => {
       this.setState({
@@ -118,11 +125,16 @@ this.setState({
   }
 
   render() {
-    const showSaveProduct = this.state.showSaveProduct
+    const showEditProduct = this.state.showEditProduct
     return (
     <MuiThemeProvider>
       <EditProductMainDiv>
+      {showEditProduct ? 
+        <button onClick={this.handleCloseEditInventoryClick}>Edit</button>
+        :
+        
         <div>
+        <button onClick={this.handleEditInventoryClick}>Close</button>
           <Mutation mutation={UPDATE_PRODUCT} key={this.props._id}>
                   {(updateProduct, { loading, error }) => (
 
@@ -133,9 +145,7 @@ this.setState({
               rounded={true}
               >
               <DeleteProduct _id={this.props._id} />
-              {showSaveProduct ? 
-              <div>
-                <RaisedButton
+              <RaisedButton
                     onClick={e => {
                       e.preventDefault()
                       console.log(this.state)
@@ -147,17 +157,6 @@ this.setState({
                     >
                     Save
                 </RaisedButton>
-              </div>
-              :
-              <div>
-              <RaisedButton
-                onClick={this.handleEditClick}
-              >
-                Edit
-              </RaisedButton> 
-                
-              </div>
-              }
               <div className="formBackGround">
               <TextField
                 value={this.state.title}
@@ -205,6 +204,8 @@ this.setState({
             )}
           </Mutation>
         </div>
+      }
+        
       </EditProductMainDiv>
     </MuiThemeProvider>
     )

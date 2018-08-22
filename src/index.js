@@ -10,6 +10,7 @@ import bgImg from './assets/gotgpp.jpg'
 
 import { ApolloProvider } from "react-apollo";
 import ApolloClient from "apollo-boost"
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const client = new ApolloClient({
   uri: "https://gql-api-kdwnwzplsd.now.sh/graphql"

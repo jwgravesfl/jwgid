@@ -4,7 +4,6 @@ import Products from './Products'
 import styled from 'styled-components'
 import CreateProduct from './CreateProduct';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import { Container } from 'semantic-ui-react'
 import AddInventoryButton from 'material-ui/svg-icons/content/add-circle'
 import CloseAddInventoryButton from 'material-ui/svg-icons/navigation/close'
 
@@ -12,31 +11,15 @@ import CloseAddInventoryButton from 'material-ui/svg-icons/navigation/close'
 
 const ProductPageDiv = styled.div`
 
-margin-top: 5vh;
+    padding: 1em;
     
-    .productPageContainer {
-        background-color: 
+    .productPageContainer { 
 
-        @media only screen and (max-width: 767px) {
-         
-      }
+        
     }
 
     .productCssGridContainer {
-      padding: ;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 1vw;
-      
-
-      @media only screen and (max-width: 900px) {
-        grid-template-columns: 1fr 1fr;
-      }
-      
-      @media only screen and (max-width: 600px) {
-        grid-template-columns: 1fr;
-      }
-    }
+     
 
     .inventoryButton {
            position: fixed;
@@ -99,9 +82,7 @@ export default class ProductPage extends Component {
       <MuiThemeProvider>
         <ProductPageDiv>   
           <div className="productPageContainer">
-          <Container
-            textAlign="center"
-            >
+          
             {showCreateProduct ? 
               <div>
                 <CreateProduct handleKeyPress={this.handleKeyPress} />
@@ -120,10 +101,7 @@ export default class ProductPage extends Component {
                 />
               </div>
             }
-            <div className="productCssGridContainer">
-              <Products />
-            </div>
-          </Container>
+             <Products />
           
           </div>  
         </ProductPageDiv>

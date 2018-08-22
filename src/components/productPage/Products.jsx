@@ -1,39 +1,11 @@
 import React, { Component } from 'react'
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
-import Card, { CardMedia } from 'material-ui/Card'
-import img from '../../assets/inventoryImages/blackGuitar.jpg'
-
-import EditProduct from './EditProduct'
-
+import { Row, Col, Card, Button, CardTitle, CardText } from 'reactstrap'
 
 
 import styled from 'styled-components'
-
-const GridColumnMainDiv = styled.div `
-    background-color: ;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-
-   #productImage {
-       height: 100%;
-       width: 100%;
-       position: absolute;
-       top: 0;
-       left: 0;
-   }
-
-   .mediaContainer{
-       height: 100%;
-       width: 100%;
-   }
-
-   .editProduct{
-       background-color: black;
-   }
-`
-
+import EditProduct from './EditProduct'
 
 const getProducts = gql`
 {
@@ -47,31 +19,35 @@ const getProducts = gql`
 }
 `
 
+const styles = {
+    addCloseInventoryStyles: {
+      width: '10vh',
+      height: '10vh'
+    },
+  }
+
 export default class Products extends Component {
-    
     
 
   render() {
       
     return (
-   
+   <Row className="show-grid">
         <Query
             query={getProducts}
             >
-                
 
             {({ loading, error, data }) => {
                 if (loading) return <p>Loading...</p>;
                 if (error) return <p>Error :(</p>;
-        
+                    
                 return data.allProducts.map(({ title, qty, _id, imageURL, productURL }) => (
-                        
-                            <GridColumnMainDiv key={_id}>
-                                <Card className="cardContainer">
-                               <CardMedia className="mediaContainer">
-                                   
-                               <img src={imageURL} alt="imageURL" id="productImage" />
-                               <EditProduct
+                    <Col xs="12" sm="6" md="6" lg="4" xl="4">
+                    <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                    <CardTitle>{title}</CardTitle>
+                    <CardText>{qty}</CardText>
+                    <CardText>{productURL}</CardText>
+                    <EditProduct
                                     className="editProduct"
                                     title={title}
                                     qty={qty}
@@ -80,12 +56,15 @@ export default class Products extends Component {
                                     productURL={productURL}
                                     data={data}
                                 />
-                                </CardMedia>
-                                </Card>  
-                            </GridColumnMainDiv>
+                    
+                  </Card>
+                    </Col>
+                            
                 ));
+                
             }}
         </Query>
+        </Row>
     )
   }
 }
